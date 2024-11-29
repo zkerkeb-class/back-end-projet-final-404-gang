@@ -1,0 +1,99 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Spotify Clone API",
+      "description": "API documentation for the Spotify Clone project"
+    },
+    "host": "localhost:3000",
+    "basePath": "/api",
+    "schemes": ["http"],
+    "paths": {
+      "/upload-audio": {
+        "post": {
+          "summary": "Upload an audio file",
+          "consumes": ["multipart/form-data"],
+          "parameters": [
+            {
+              "name": "audio",
+              "in": "formData",
+              "description": "The audio file to upload",
+              "required": true,
+              "type": "file"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Audio file uploaded successfully"
+            },
+            "500": {
+              "description": "Error uploading audio file"
+            }
+          }
+        }
+      },
+      "/upload-image": {
+        "post": {
+          "summary": "Upload an image file",
+          "consumes": ["multipart/form-data"],
+          "parameters": [
+            {
+              "name": "image",
+              "in": "formData",
+              "description": "The image file to upload",
+              "required": true,
+              "type": "file"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Image file uploaded successfully"
+            },
+            "500": {
+              "description": "Error uploading image file"
+            }
+          }
+        }
+      },
+      "/search": {
+        "get": {
+          "summary": "Search for tracks",
+          "parameters": [
+            {
+              "name": "artist",
+              "in": "query",
+              "description": "Artist name",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "in": "query",
+              "description": "Track title",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "album",
+              "in": "query",
+              "description": "Album title",
+              "required": false,
+              "type": "string"
+            },
+            {
+              "name": "genre",
+              "in": "query",
+              "description": "Genre",
+              "required": false,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Search results"
+            }
+          }
+        }
+      }
+    }
+  }
