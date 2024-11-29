@@ -1,10 +1,10 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const PlaylistSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String },
   tracks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Track' }],
-  createdBy: { type: String, required: true }, // User who created the playlist
+  createdBy: { type: String, required: true },
 }, { timestamps: true });
 
-export default mongoose.model('Playlist', PlaylistSchema);
+module.exports = mongoose.model('Playlist', PlaylistSchema);
