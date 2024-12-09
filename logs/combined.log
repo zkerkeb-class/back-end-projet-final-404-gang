@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {"level":"info","message":"Application started","timestamp":"2024-11-22T19:52:58.972Z"}
 {"level":"error","message":"An error occurred","timestamp":"2024-11-22T19:52:58.975Z"}
 {"level":"info","message":"Application started","timestamp":"2024-11-22T19:56:48.259Z"}
@@ -58,3 +59,7 @@
 {"level":"error","message":"An error occurred","timestamp":"2024-12-09T09:55:57.251Z"}
 {"level":"info","message":"Application started","timestamp":"2024-12-09T10:04:50.705Z"}
 {"level":"error","message":"An error occurred","timestamp":"2024-12-09T10:04:50.707Z"}
+=======
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-11-29T14:26:47.418Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-11-29T14:26:47.439Z"}
+>>>>>>> eb4046408960666168531c8f3122954f0e751f3e
