@@ -8,8 +8,15 @@ const TrackSchema = new mongoose.Schema({
   album: { type: mongoose.Schema.Types.ObjectId, ref: 'Album', required: true },
   genre: { type: String },
   popularity: { type: Number, default: 0 },
-  filePath: { type: String, required: true }, // Path to audio file
+  audioUrl: { type: String },
   phoneticCode: { type: [String], index: true },
+  images: {
+    original: { type: String },
+    thumbnail: { type: String },
+    small: { type: String },
+    medium: { type: String },
+    large: { type: String }
+  }
 }, { timestamps: true });
 
 TrackSchema.pre('save', function (next) {

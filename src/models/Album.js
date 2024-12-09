@@ -7,7 +7,14 @@ const AlbumSchema = new mongoose.Schema({
   genre: { type: String },
   releaseDate: { type: Date },
   tracks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Track' }],
-  phoneticCode: { type: [String], index: true }
+  phoneticCode: { type: [String], index: true },
+  images: {
+    original: { type: String },
+    thumbnail: { type: String },
+    small: { type: String },
+    medium: { type: String },
+    large: { type: String }
+  }
 }, { timestamps: true });
 
 AlbumSchema.pre('save', function (next) {
