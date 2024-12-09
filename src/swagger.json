@@ -8,9 +8,101 @@
   "host": "localhost:3000",
   "basePath": "/api",
   "schemes": ["http"],
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header",
+      "description": "JWT Authorization header using the Bearer scheme. Example: \"Bearer {token}\""
+    },
+    "CSRF": {
+      "type": "apiKey",
+      "name": "X-CSRF-Token",
+      "in": "header",
+      "description": "CSRF Token for form submissions"
+    }
+  },
   "paths": {
+    "/users/register": {
+      "post": {
+        "summary": "Register a new user",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "user",
+            "description": "User registration details",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserRegistration"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User registered successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "summary": "Login user",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "credentials",
+            "description": "User login credentials",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLogin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid credentials"
+          }
+        }
+      }
+    },
     "/upload-audio": {
       "post": {
+        "security": [
+          {
+            "Bearer": []
+          }
+        ],
         "summary": "Upload an audio file",
         "consumes": ["multipart/form-data"],
         "parameters": [
@@ -33,149 +125,94 @@
           "200": {
             "description": "Audio file uploaded successfully"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Error uploading audio file"
           }
         }
       }
     },
-    "/upload-image": {
-      "post": {
-        "summary": "Upload an image file",
-        "consumes": ["multipart/form-data"],
-        "parameters": [
-          {
-            "name": "image",
-            "in": "formData",
-            "description": "The image file to upload",
-            "required": true,
-            "type": "file"
-          },
-          {
-            "name": "albumId",
-            "in": "formData",
-            "description": "The ID of the album to update",
-            "required": true,
-            "type": "string"
-          }
-        ],
+    "/csrf-token": {
+      "get": {
+        "summary": "Get CSRF token",
         "responses": {
           "200": {
-            "description": "Image file uploaded successfully"
-          },
-          "500": {
-            "description": "Error uploading image file"
+            "description": "CSRF token",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "csrfToken": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
     },
-    "/search": {
+    "/health": {
       "get": {
-        "summary": "Search for tracks",
-        "parameters": [
-          {
-            "name": "artist",
-            "in": "query",
-            "description": "Artist name",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "title",
-            "in": "query",
-            "description": "Track title",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "album",
-            "in": "query",
-            "description": "Album title",
-            "required": false,
-            "type": "string"
-          },
-          {
-            "name": "genre",
-            "in": "query",
-            "description": "Genre",
-            "required": false,
-            "type": "string"
-          }
-        ],
+        "summary": "Health check endpoint",
         "responses": {
           "200": {
-            "description": "Search results"
+            "description": "System health status",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "redis": {
+                  "type": "string"
+                },
+                "session": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
     }
   },
   "definitions": {
-    "Track": {
+    "UserRegistration": {
       "type": "object",
+      "required": ["username", "email", "password"],
       "properties": {
-        "title": {
-          "type": "string"
+        "username": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 30
         },
-        "duration": {
-          "type": "integer"
+        "email": {
+          "type": "string",
+          "format": "email"
         },
-        "artist": {
-          "type": "string"
+        "password": {
+          "type": "string",
+          "minLength": 6
         },
-        "album": {
-          "type": "string"
-        },
-        "genre": {
-          "type": "string"
-        },
-        "popularity": {
-          "type": "integer"
-        },
-        "audioUrl": {
-          "type": "string"
-        },
-        "phoneticCode": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "imageUrl": {
-          "type": "string"
+        "role": {
+          "type": "string",
+          "enum": ["admin", "user"],
+          "default": "user"
         }
       }
     },
-    "Album": {
+    "UserLogin": {
       "type": "object",
+      "required": ["email", "password"],
       "properties": {
-        "title": {
-          "type": "string"
-        },
-        "artist": {
-          "type": "string"
-        },
-        "genre": {
-          "type": "string"
-        },
-        "releaseDate": {
+        "email": {
           "type": "string",
-          "format": "date"
+          "format": "email"
         },
-        "tracks": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "phoneticCode": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "imageUrl": {
-          "type": "string"
+        "password": {
+          "type": "string",
+          "minLength": 6
         }
       }
     }
