@@ -1,0 +1,14 @@
+# Get basic Redis stats
+curl http://localhost:3000/monitor/redis/stats
+
+# Get cache performance metrics
+curl http://localhost:3000/monitor/cache/stats
+
+# Get network stats
+curl http://localhost:3000/monitor/network/stats
+
+# Get memory metrics for the last 2 hours
+curl http://localhost:3000/monitor/metrics/memory?timeRange=7200000
+
+# Get historical cache stats for the last 24 hours
+curl http://localhost:3000/monitor/stats/history?type=cache&timeRange=86400000
