@@ -9,7 +9,10 @@ const uploadRoutes = require('./routes/uploadRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 const connectDB = require('./utils/db');
 const monitorRoutes = require('./routes/monitorRoutes');
-
+const artistRoutes = require('./routes/artistRoutes');
+const albumRoutes = require('./routes/albumRoutes');
+const trackRoutes = require('./routes/trackRoutes');
+const playlistRoutes = require('./routes/playlistRoutes');
 
 const app = express();
 
@@ -27,8 +30,14 @@ const initializeApp = async () => {
     // Middleware
     app.use(bodyParser.json());
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+    // API Routes
     app.use('/api', uploadRoutes);
     app.use('/api', searchRoutes);
+    app.use('/api', artistRoutes);
+    app.use('/api', albumRoutes);
+    app.use('/api', trackRoutes);
+    app.use('/api', playlistRoutes);
     app.use('/monitor', monitorRoutes);
 
     // Health check endpoint
