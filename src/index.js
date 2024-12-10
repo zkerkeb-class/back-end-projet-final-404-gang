@@ -62,7 +62,7 @@ const initializeApp = async () => {
     app.use('/api', albumRoutes);
     app.use('/api', trackRoutes);
     app.use('/api', playlistRoutes);
-    app.use('/monitor', monitorRoutes);
+    app.use('/api/monitor', monitorRoutes);
     app.use('/api/users', userRoutes);
 
     // Route pour renvoyer un token CSRF
