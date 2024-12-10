@@ -24,8 +24,6 @@ const playlistRoutes = require('./routes/playlistRoutes');
 
 // Charger les variables d'environnement
 dotenv.config();
-// Charger les variables d'environnement
-dotenv.config();
 
 const app = express();
 
