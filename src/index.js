@@ -16,14 +16,12 @@ const swaggerDocument = require('./swagger.json');
 const uploadRoutes = require('./routes/uploadRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 const monitorRoutes = require('./routes/monitorRoutes');
-const userRoutes = require('./routes/userRoutes');
+
 const artistRoutes = require('./routes/artistRoutes');
 const albumRoutes = require('./routes/albumRoutes');
 const trackRoutes = require('./routes/trackRoutes');
 const playlistRoutes = require('./routes/playlistRoutes');
 
-// Charger les variables d'environnement
-dotenv.config();
 
 const app = express();
 
@@ -57,8 +55,14 @@ const initializeApp = async () => {
 
     // Routes API
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+    // API Routes
     app.use('/api', uploadRoutes);
     app.use('/api', searchRoutes);
+    app.use('/api', artistRoutes);
+    app.use('/api', albumRoutes);
+    app.use('/api', trackRoutes);
+    app.use('/api', playlistRoutes);
     app.use('/monitor', monitorRoutes);
     app.use('/api/users', userRoutes);
 

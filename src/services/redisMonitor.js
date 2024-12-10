@@ -579,6 +579,71 @@ class RedisMonitor {
       return { server: [], cache: [], network: [], memory: [] };
     }
   }
+  // Media Processing Monitoring Methods
+  static async recordMediaProcessing(operation, details) {
+    try {
+      const { client } = await getRedisConnection();
+      const timestamp = Date.now();
+      const key = `monitor:media:${operation}:${timestamp}`;
+
+      await client.set(key, JSON.stringify({
+        timestamp,
+        operation,
+        ...details
+      }));
+
+      // Record processing time for statistics
+      if (details.duration) {
+        await client.zAdd(`monitor:media:times:${operation}`, [{
+          score: timestamp,
+          value: details.duration.toString()
+        }]);
+      }
+
+      // Cleanup old records
+      await this.cleanupOldStats('monitor:media:');
+    } catch (error) {
+      logger.error('Error recording media processing:', error);
+    }
+  }
+
+  static async getMediaProcessingStats(timeRange = 3600000) {
+  try {
+    const { client } = await getRedisConnection();
+    const now = Date.now();
+    const minTime = now - timeRange;
+
+    // Get all media processing operations
+    const operations = new Set();
+    const keys = await client.keys('monitor:media:times:*');
+    keys.forEach(key => {
+      const operation = key.split(':')[3];
+      operations.add(operation);
+    });
+
+    const stats = {};
+    for (const operation of operations) {
+      const times = await client.zRangeByScore(`monitor:media:times:${operation}`, minTime, now);
+      
+      if (times.length > 0) {
+        const durations = times.map(t => parseFloat(t));
+        stats[operation] = {
+          count: durations.length,
+          avgDuration: (durations.reduce((a, b) => a + b, 0) / durations.length).toFixed(2),
+          minDuration: Math.min(...durations).toFixed(2),
+          maxDuration: Math.max(...durations).toFixed(2),
+          lastProcessed: new Date(now).toISOString()
+        };
+      }
+    }
+
+    console.log('Media Processing Stats:', stats); // Debugging log
+    return stats;
+  } catch (error) {
+    logger.error('Error getting media processing stats:', error);
+    return {};
+  }
+}
 }
 
 module.exports = RedisMonitor;

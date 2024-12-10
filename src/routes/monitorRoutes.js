@@ -80,5 +80,27 @@ router.get('/stats/history', async (req, res) => {
       res.status(500).json({ error: 'Failed to fetch server resources' });
     }
   });
+  router.get('/media/stats', async (req, res) => {
+    try {
+      const timeRange = parseInt(req.query.timeRange) || 3600000;
+      const stats = await RedisMonitor.getMediaProcessingStats(timeRange);
+      res.json(stats);
+    } catch (error) {
+      logger.error('Error fetching media processing stats:', error);
+      res.status(500).json({ error: 'Failed to fetch media processing stats' });
+    }
+  });
+  
+  router.get('/media/history/:operation', async (req, res) => {
+    try {
+      const { operation } = req.params;
+      const timeRange = parseInt(req.query.timeRange) || 3600000;
+      const history = await RedisMonitor.getMediaProcessingHistory(operation, timeRange);
+      res.json(history);
+    } catch (error) {
+      logger.error('Error fetching media processing history:', error);
+      res.status(500).json({ error: 'Failed to fetch media processing history' });
+    }
+  });
 
 module.exports = router;

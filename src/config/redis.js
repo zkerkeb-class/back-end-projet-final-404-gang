@@ -1,5 +1,6 @@
 const Redis = require('redis');
 const logger = require('../utils/logger');
+const retryOperation = require('../utils/retryOperation');
 
 const createRedisClient = async () => {
   const client = Redis.createClient({
@@ -7,6 +8,18 @@ const createRedisClient = async () => {
     socket: {
       host: process.env.REDIS_HOST,
       port: process.env.REDIS_PORT
+    },
+    retry_strategy: function(options) {
+      if (options.error && options.error.code === 'ECONNREFUSED') {
+        return new Error('The server refused the connection');
+      }
+      if (options.total_retry_time > 1000 * 60 * 60) {
+        return new Error('Retry time exhausted');
+      }
+      if (options.attempt > 10) {
+        return undefined;
+      }
+      return Math.min(options.attempt * 100, 3000);
     }
   });
 
@@ -14,22 +27,28 @@ const createRedisClient = async () => {
   client.on('connect', () => logger.info('Redis Client Connected'));
 
   try {
-    await client.connect();
+    await retryOperation(async () => {
+      await client.connect();
+    }, {
+      maxRetries: 5,
+      initialDelay: 2000,
+    });
+    
     logger.info('Redis connection established');
 
     return {
       client,
       queryCache: {
-        get: client.get.bind(client),
-        set: client.set.bind(client),
-        del: client.del.bind(client),
-        keys: client.keys.bind(client)
+        get: async (key) => retryOperation(() => client.get(key)),
+        set: async (key, value, ...args) => retryOperation(() => client.set(key, value, ...args)),
+        del: async (key) => retryOperation(() => client.del(key)),
+        keys: async (pattern) => retryOperation(() => client.keys(pattern))
       },
       fileCache: {
-        get: client.get.bind(client),
-        set: client.set.bind(client),
-        del: client.del.bind(client),
-        keys: client.keys.bind(client)
+        get: async (key) => retryOperation(() => client.get(key)),
+        set: async (key, value, ...args) => retryOperation(() => client.set(key, value, ...args)),
+        del: async (key) => retryOperation(() => client.del(key)),
+        keys: async (pattern) => retryOperation(() => client.keys(pattern))
       }
     };
   } catch (error) {
@@ -42,7 +61,10 @@ let redisInstance = null;
 
 const getRedisConnection = async () => {
   if (!redisInstance) {
-    redisInstance = await createRedisClient();
+    redisInstance = await retryOperation(createRedisClient, {
+      maxRetries: 3,
+      initialDelay: 3000,
+    });
   }
   return redisInstance;
 };
