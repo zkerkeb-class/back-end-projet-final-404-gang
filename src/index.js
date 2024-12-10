@@ -16,12 +16,11 @@ const swaggerDocument = require('./swagger.json');
 const uploadRoutes = require('./routes/uploadRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 const monitorRoutes = require('./routes/monitorRoutes');
-
+const userRoutes = require('./routes/userRoutes');
 const artistRoutes = require('./routes/artistRoutes');
 const albumRoutes = require('./routes/albumRoutes');
 const trackRoutes = require('./routes/trackRoutes');
 const playlistRoutes = require('./routes/playlistRoutes');
-
 
 const app = express();
 
@@ -72,7 +71,7 @@ const initializeApp = async () => {
     });
 
     // Route de vérification de santé
-    app.get('/health', async (req, res) => {
+    app.get('/api/health', async (req, res) => {
       try {
         await req.session.touch();
         res.json({

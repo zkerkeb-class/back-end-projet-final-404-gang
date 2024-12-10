@@ -9,6 +9,97 @@
   "basePath": "/api",
   "schemes": ["http"],
   "paths": {
+    "/csrf-token": {
+      "get": {
+        "summary": "Get CSRF token",
+        "responses": {
+          "200": {
+            "description": "CSRF token",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "csrfToken": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/register": {
+      "post": {
+        "summary": "Register a new user",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "user",
+            "description": "User registration details",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserRegistration"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User registered successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "summary": "Login user",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "credentials",
+            "description": "User login credentials",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserLogin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "token": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid credentials"
+          }
+        }
+      }
+    },
     "/albums": {
       "post": {
         "summary": "Create a new album",
@@ -16,6 +107,13 @@
         "consumes": ["application/json"],
         "produces": ["application/json"],
         "parameters": [
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
           {
             "in": "body",
             "name": "album",
@@ -80,6 +178,13 @@
         "summary": "Update album",
         "description": "Updates an album with automatic retry on failure",
         "parameters": [
+          {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "id",
             "in": "path",
@@ -228,6 +333,13 @@
         "consumes": ["multipart/form-data"],
         "parameters": [
           {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
+          {
             "name": "audio",
             "in": "formData",
             "description": "The audio file to upload",
@@ -260,7 +372,13 @@
         "summary": "Upload an image file",
         "description": "Upload an image file with automatic retry on failure",
         "consumes": ["multipart/form-data"],
-        "parameters": [
+        "parameters": [{
+          "in": "header",
+          "name": "X-CSRF-Token",
+          "description": "CSRF Token for protection against CSRF attacks",
+          "required": true,
+          "type": "string"
+        },
           {
             "name": "image",
             "in": "formData",
@@ -511,6 +629,13 @@
         "consumes": ["multipart/form-data"],
         "parameters": [
           {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
+          {
             "name": "id",
             "in": "path",
             "required": true,
@@ -602,6 +727,13 @@
         "description": "Updates a track with automatic retry on failure",
         "parameters": [
           {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
+          {
             "name": "id",
             "in": "path",
             "required": true,
@@ -644,6 +776,13 @@
         "description": "Deletes a track with automatic retry on failure",
         "parameters": [
           {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
+          {
             "name": "id",
             "in": "path",
             "required": true,
@@ -678,9 +817,74 @@
           }
         }
       }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check endpoint",
+        "responses": {
+          "200": {
+            "description": "System health status",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "redis": {
+                  "type": "string"
+                },
+                "session": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  
   },
   "definitions": {
+    "UserRegistration": {
+      "type": "object",
+      "required": ["username", "email", "password"],
+      "properties": {
+        "username": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 30
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "password": {
+          "type": "string",
+          "minLength": 6
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin", "user"],
+          "default": "user"
+        }
+      }
+    },
+    "UserLogin": {
+      "type": "object",
+      "required": ["email", "password"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "password": {
+          "type": "string",
+          "minLength": 6
+        }
+      }
+    },
+  
+
     "Track": {
       "type": "object",
       "properties": {
