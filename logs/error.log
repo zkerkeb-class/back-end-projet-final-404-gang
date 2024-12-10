@@ -28,3 +28,32 @@
 {"level":"error","message":"An error occurred","timestamp":"2024-12-09T09:54:31.306Z"}
 {"level":"error","message":"An error occurred","timestamp":"2024-12-09T09:55:57.251Z"}
 {"level":"error","message":"An error occurred","timestamp":"2024-12-09T10:04:50.707Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:00:00.307Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:04:56.532Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:06:33.305Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:07:07.393Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:08:25.985Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:09:18.459Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:25:56.797Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:27:04.967Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:29:25.131Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:31:30.994Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:32:01.389Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:38:29.604Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:20:49.910Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:22:38.414Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:23:08.919Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:24:41.915Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:30:47.142Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:33:05.954Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:34:43.525Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:36:48.242Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:44:26.246Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:50:24.384Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:11:43.293Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:14:15.153Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:18:21.756Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:19:11.109Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:20:49.901Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:25:37.815Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:26:16.068Z"}

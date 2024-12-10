@@ -63,3 +63,63 @@
 {"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-11-29T14:26:47.418Z"}
 {"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-11-29T14:26:47.439Z"}
 >>>>>>> eb4046408960666168531c8f3122954f0e751f3e
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:00:00.307Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:04:56.532Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:06:33.305Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:07:07.393Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:08:25.985Z"}
+{"level":"error","message":"Error connecting to MongoDB:","timestamp":"2024-12-09T11:09:18.459Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:25:56.797Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:27:04.967Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:29:25.131Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:31:30.994Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:32:01.389Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T11:38:29.604Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:20:49.910Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T15:22:33.326Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:22:38.414Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T15:23:03.852Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:23:08.919Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T15:23:24.048Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T15:23:40.919Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:24:41.915Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:30:47.142Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:33:05.954Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T15:33:35.176Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T15:34:13.457Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:34:43.525Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T15:35:38.556Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:36:48.242Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:44:26.246Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T15:50:24.384Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:11:43.293Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:14:15.153Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:18:21.756Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:19:11.109Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:20:49.901Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:25:37.815Z"}
+{"level":"error","message":"Error connecting to MongoDB:","service":"user-service","timestamp":"2024-12-09T16:26:16.068Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-09T16:33:38.211Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-09T16:33:38.220Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:38:27.572Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:38:27.578Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:47:13.061Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:47:13.069Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:48:14.884Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:48:14.889Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:51:16.167Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:51:16.172Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:51:39.176Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:51:39.182Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:52:30.611Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:52:30.615Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:52:50.984Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:52:50.990Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:55:20.349Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:55:20.354Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:55:27.388Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:55:27.393Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T10:57:57.892Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T10:57:57.896Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-12-10T11:13:24.176Z"}
+{"level":"info","message":"Server running on http://localhost:3000","service":"user-service","timestamp":"2024-12-10T11:13:24.181Z"}
