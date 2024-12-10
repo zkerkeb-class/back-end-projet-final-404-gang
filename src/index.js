@@ -17,7 +17,13 @@ const uploadRoutes = require('./routes/uploadRoutes');
 const searchRoutes = require('./routes/searchRoutes');
 const monitorRoutes = require('./routes/monitorRoutes');
 const userRoutes = require('./routes/userRoutes');
+const artistRoutes = require('./routes/artistRoutes');
+const albumRoutes = require('./routes/albumRoutes');
+const trackRoutes = require('./routes/trackRoutes');
+const playlistRoutes = require('./routes/playlistRoutes');
 
+// Charger les variables d'environnement
+dotenv.config();
 // Charger les variables d'environnement
 dotenv.config();
 
