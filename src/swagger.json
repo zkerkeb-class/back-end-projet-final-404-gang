@@ -73,6 +73,13 @@
         "consumes": ["application/json"],
         "parameters": [
           {
+            "in": "header",
+            "name": "X-CSRF-Token",
+            "description": "CSRF Token for protection against CSRF attacks",
+            "required": true,
+            "type": "string"
+          },
+          {
             "in": "body",
             "name": "credentials",
             "description": "User login credentials",
