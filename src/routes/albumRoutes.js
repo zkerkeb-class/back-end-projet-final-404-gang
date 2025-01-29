@@ -1,103 +1,87 @@
 const express = require('express');
 const router = express.Router();
-const CacheInvalidationService = require('../services/cacheInvalidation');
+const Album = require('../models/Album');
 const { cacheQuery } = require('../middleware/queryCache');
 const logger = require('../utils/logger');
-const retryOperation = require('../utils/retryOperation');
-const Album = require('../models/Album');
 
-router.post('/albums', async (req, res) => {
+// Get all albums
+router.get('/albums', cacheQuery(3600), async (req, res) => {
   try {
-    const album = await retryOperation(async () => {
-      return await Album.create(req.body);
-    });
-    
-    // Invalidate related caches
-    await retryOperation(async () => {
-      await CacheInvalidationService.invalidateRelatedCaches(
-        { type: 'album', id: album._id, artistId: album.artist },
-        'create'
-      );
-    });
+    const { 
+      sort = 'releaseDate',
+      order = 'desc',
+      limit = 20,
+      offset = 0,
+      genre,
+      minYear,
+      maxYear
+    } = req.query;
 
-    res.status(201).json(album);
-  } catch (error) {
-    logger.error('Error creating album:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-router.get('/albums/:id/images', cacheQuery(3600), async (req, res) => {
-  try {
-    const { size = 'medium' } = req.query;
-    const validSizes = ['thumbnail', 'small', 'medium', 'large', 'original'];
+    let query = {};
     
-    if (!validSizes.includes(size)) {
-      return res.status(400).json({ 
-        error: 'Invalid size parameter',
-        validSizes
+    // Filters
+    if (genre) {
+      query.genre = genre;
+    }
+
+    if (minYear || maxYear) {
+      query.releaseDate = {};
+      if (minYear) query.releaseDate.$gte = new Date(minYear, 0, 1);
+      if (maxYear) query.releaseDate.$lte = new Date(maxYear, 11, 31);
+    }
+
+    // Sort
+    let sortQuery = {};
+    switch (sort) {
+      case 'title':
+        sortQuery.title = order === 'desc' ? -1 : 1;
+        break;
+      case 'trackCount':
+        // Will be handled after population
+        break;
+      case 'releaseDate':
+      default:
+        sortQuery.releaseDate = order === 'desc' ? -1 : 1;
+    }
+
+    let albums = await Album.find(query)
+      .sort(sortQuery)
+      .skip(parseInt(offset))
+      .limit(parseInt(limit))
+      .populate('artist')
+      .populate('tracks');
+
+    // Handle track count sorting
+    if (sort === 'trackCount') {
+      albums = albums.sort((a, b) => {
+        const diff = a.tracks.length - b.tracks.length;
+        return order === 'desc' ? -diff : diff;
       });
     }
 
-    const album = await retryOperation(async () => {
-      return await Album.findById(req.params.id).select('images');
-    });
-    
-    if (!album) {
-      return res.status(404).json({ error: 'Album not found' });
-    }
-
-    if (!album.images || !album.images[size]) {
-      return res.status(404).json({ error: 'Image not found for this album' });
-    }
-
-    // Return the image URL for the requested size
-    res.json({
-      imageUrl: album.images[size],
-      size,
-      availableSizes: validSizes.filter(s => album.images[s])
-    });
+    res.json(albums);
   } catch (error) {
-    logger.error('Error fetching album image:', error);
+    logger.error('Error fetching albums:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-router.put('/albums/:id', async (req, res) => {
-  try {
-    const album = await retryOperation(async () => {
-      return await Album.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    });
-    
-    if (!album) {
-      return res.status(404).json({ error: 'Album not found' });
-    }
-    
-    // Invalidate related caches
-    await retryOperation(async () => {
-      await CacheInvalidationService.invalidateRelatedCaches(
-        { type: 'album', id: album._id, artistId: album.artist },
-        'update'
-      );
-    });
-
-    res.json(album);
-  } catch (error) {
-    logger.error('Error updating album:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
+// Get album by ID
 router.get('/albums/:id', cacheQuery(3600), async (req, res) => {
   try {
-    const album = await retryOperation(async () => {
-      return await Album.findById(req.params.id).populate('artist');
-    });
-    
+    const album = await Album.findById(req.params.id)
+      .populate('artist')
+      .populate({
+        path: 'tracks',
+        populate: {
+          path: 'artist'
+        }
+      });
+
     if (!album) {
       return res.status(404).json({ error: 'Album not found' });
     }
-    
+
     res.json(album);
   } catch (error) {
     logger.error('Error fetching album:', error);
@@ -105,27 +89,94 @@ router.get('/albums/:id', cacheQuery(3600), async (req, res) => {
   }
 });
 
-router.delete('/albums/:id', async (req, res) => {
+// Create new album
+router.post('/albums', async (req, res) => {
   try {
-    const album = await retryOperation(async () => {
-      return await Album.findByIdAndDelete(req.params.id);
+    const { title, artist, releaseDate, genre, coverImage } = req.body;
+
+    if (!title || !artist) {
+      return res.status(400).json({ error: 'Title and artist are required' });
+    }
+
+    const album = new Album({
+      title,
+      artist,
+      releaseDate: releaseDate || new Date(),
+      genre,
+      coverImage
     });
-    
+
+    await album.save();
+    res.status(201).json(album);
+  } catch (error) {
+    logger.error('Error creating album:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Update album
+router.put('/albums/:id', async (req, res) => {
+  try {
+    const album = await Album.findById(req.params.id);
+
     if (!album) {
       return res.status(404).json({ error: 'Album not found' });
     }
-    
-    // Invalidate related caches
-    await retryOperation(async () => {
-      await CacheInvalidationService.invalidateRelatedCaches(
-        { type: 'album', id: album._id, artistId: album.artist },
-        'delete'
-      );
-    });
 
+    const { title, artist, releaseDate, genre, coverImage } = req.body;
+
+    if (title) album.title = title;
+    if (artist) album.artist = artist;
+    if (releaseDate) album.releaseDate = releaseDate;
+    if (genre) album.genre = genre;
+    if (coverImage) album.coverImage = coverImage;
+
+    await album.save();
+    res.json(album);
+  } catch (error) {
+    logger.error('Error updating album:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Delete album
+router.delete('/albums/:id', async (req, res) => {
+  try {
+    const album = await Album.findById(req.params.id);
+
+    if (!album) {
+      return res.status(404).json({ error: 'Album not found' });
+    }
+
+    await album.remove();
     res.json({ message: 'Album deleted successfully' });
   } catch (error) {
     logger.error('Error deleting album:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Get album's tracks
+router.get('/albums/:id/tracks', cacheQuery(3600), async (req, res) => {
+  try {
+    const album = await Album.findById(req.params.id)
+      .populate({
+        path: 'tracks',
+        populate: {
+          path: 'artist'
+        },
+        options: {
+          sort: { trackNumber: 1 }
+        }
+      });
+
+    if (!album) {
+      return res.status(404).json({ error: 'Album not found' });
+    }
+
+    res.json(album.tracks);
+  } catch (error) {
+    logger.error('Error fetching album tracks:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
