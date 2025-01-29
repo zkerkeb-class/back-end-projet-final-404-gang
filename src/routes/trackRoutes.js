@@ -1,112 +1,79 @@
 const express = require('express');
 const router = express.Router();
-const CacheInvalidationService = require('../services/cacheInvalidation');
+const Track = require('../models/Track');
 const { cacheQuery } = require('../middleware/queryCache');
 const logger = require('../utils/logger');
-const retryOperation = require('../utils/retryOperation');
-const Track = require('../models/Track');
-const { convertAudio } = require('../utils/audioConversion');
-const SimilarityService = require('../services/similarityService');
 
-router.get('/tracks/:id/audio', cacheQuery(3600), async (req, res) => {
+// Get all tracks
+router.get('/tracks', cacheQuery(3600), async (req, res) => {
   try {
-    const { format = 'mp3', bitrate = '128k' } = req.query;
-    const validFormats = ['mp3', 'ogg', 'wav'];
-    const validBitrates = ['64k', '128k', '192k', '256k', '320k'];
+    const { 
+      sort = 'title',
+      order = 'asc',
+      limit = 20,
+      offset = 0,
+      genre,
+      minDuration,
+      maxDuration,
+      minPopularity
+    } = req.query;
+
+    let query = {};
     
-    if (!validFormats.includes(format)) {
-      return res.status(400).json({ 
-        error: 'Invalid format parameter',
-        validFormats
-      });
+    // Filters
+    if (genre) {
+      query.genre = genre;
     }
 
-    if (!validBitrates.includes(bitrate)) {
-      return res.status(400).json({
-        error: 'Invalid bitrate parameter',
-        validBitrates
-      });
+    if (minDuration || maxDuration) {
+      query.duration = {};
+      if (minDuration) query.duration.$gte = parseInt(minDuration);
+      if (maxDuration) query.duration.$lte = parseInt(maxDuration);
     }
 
-    const track = await retryOperation(async () => {
-      return await Track.findById(req.params.id).select('audioUrl');
-    });
-    
-    if (!track) {
-      return res.status(404).json({ error: 'Track not found' });
+    if (minPopularity) {
+      query.popularity = { $gte: parseInt(minPopularity) };
     }
 
-    if (!track.audioUrl) {
-      return res.status(404).json({ error: 'Audio not found for this track' });
+    // Sort
+    let sortQuery = {};
+    switch (sort) {
+      case 'duration':
+        sortQuery.duration = order === 'desc' ? -1 : 1;
+        break;
+      case 'popularity':
+        sortQuery.popularity = order === 'desc' ? -1 : 1;
+        break;
+      case 'title':
+      default:
+        sortQuery.title = order === 'desc' ? -1 : 1;
     }
 
-    // Return the audio URL with format and bitrate info
-    res.json({
-      audioUrl: track.audioUrl,
-      format,
-      bitrate,
-      availableFormats: validFormats,
-      availableBitrates: validBitrates
-    });
+    const tracks = await Track.find(query)
+      .sort(sortQuery)
+      .skip(parseInt(offset))
+      .limit(parseInt(limit))
+      .populate('artist')
+      .populate('album');
+
+    res.json(tracks);
   } catch (error) {
-    logger.error('Error fetching track audio:', error);
+    logger.error('Error fetching tracks:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-router.post('/tracks/:id/audio', async (req, res) => {
-  try {
-    const track = await retryOperation(async () => {
-      return await Track.findById(req.params.id);
-    });
-    
-    if (!track) {
-      return res.status(404).json({ error: 'Track not found' });
-    }
-
-    if (!req.file) {
-      return res.status(400).json({ error: 'No audio file provided' });
-    }
-
-    const audioUrl = await retryOperation(async () => {
-      return await convertAudio(req.file.path, 'mp3');
-    });
-
-    track.audioUrl = audioUrl;
-    await retryOperation(async () => {
-      await track.save();
-    });
-
-    // Invalidate related caches
-    await retryOperation(async () => {
-      await CacheInvalidationService.invalidateRelatedCaches(
-        { type: 'track', id: track._id, albumId: track.album },
-        'update'
-      );
-    });
-
-    res.json({
-      message: 'Audio uploaded and converted successfully',
-      audioUrl
-    });
-  } catch (error) {
-    logger.error('Error uploading track audio:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
+// Get track by ID
 router.get('/tracks/:id', cacheQuery(3600), async (req, res) => {
   try {
-    const track = await retryOperation(async () => {
-      return await Track.findById(req.params.id)
-        .populate('artist')
-        .populate('album');
-    });
-    
+    const track = await Track.findById(req.params.id)
+      .populate('artist')
+      .populate('album');
+
     if (!track) {
       return res.status(404).json({ error: 'Track not found' });
     }
-    
+
     res.json(track);
   } catch (error) {
     logger.error('Error fetching track:', error);
@@ -114,24 +81,51 @@ router.get('/tracks/:id', cacheQuery(3600), async (req, res) => {
   }
 });
 
+// Create new track
+router.post('/tracks', async (req, res) => {
+  try {
+    const { title, artist, album, duration, genre } = req.body;
+
+    if (!title || !artist || !album) {
+      return res.status(400).json({ error: 'Title, artist and album are required' });
+    }
+
+    const track = new Track({
+      title,
+      artist,
+      album,
+      duration,
+      genre,
+      popularity: 0
+    });
+
+    await track.save();
+    res.status(201).json(track);
+  } catch (error) {
+    logger.error('Error creating track:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Update track
 router.put('/tracks/:id', async (req, res) => {
   try {
-    const track = await retryOperation(async () => {
-      return await Track.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    });
-    
+    const track = await Track.findById(req.params.id);
+
     if (!track) {
       return res.status(404).json({ error: 'Track not found' });
     }
-    
-    // Invalidate related caches
-    await retryOperation(async () => {
-      await CacheInvalidationService.invalidateRelatedCaches(
-        { type: 'track', id: track._id, albumId: track.album },
-        'update'
-      );
-    });
 
+    const { title, artist, album, duration, genre, popularity } = req.body;
+
+    if (title) track.title = title;
+    if (artist) track.artist = artist;
+    if (album) track.album = album;
+    if (duration) track.duration = duration;
+    if (genre) track.genre = genre;
+    if (popularity !== undefined) track.popularity = popularity;
+
+    await track.save();
     res.json(track);
   } catch (error) {
     logger.error('Error updating track:', error);
@@ -139,24 +133,16 @@ router.put('/tracks/:id', async (req, res) => {
   }
 });
 
+// Delete track
 router.delete('/tracks/:id', async (req, res) => {
   try {
-    const track = await retryOperation(async () => {
-      return await Track.findByIdAndDelete(req.params.id);
-    });
-    
+    const track = await Track.findById(req.params.id);
+
     if (!track) {
       return res.status(404).json({ error: 'Track not found' });
     }
-    
-    // Invalidate related caches
-    await retryOperation(async () => {
-      await CacheInvalidationService.invalidateRelatedCaches(
-        { type: 'track', id: track._id, albumId: track.album },
-        'delete'
-      );
-    });
 
+    await track.remove();
     res.json({ message: 'Track deleted successfully' });
   } catch (error) {
     logger.error('Error deleting track:', error);
@@ -164,81 +150,29 @@ router.delete('/tracks/:id', async (req, res) => {
   }
 });
 
-// Trouver des morceaux similaires
+// Get similar tracks
 router.get('/tracks/:id/similar', cacheQuery(3600), async (req, res) => {
   try {
-    const {
-      limit = 10,
-      minScore = 0.5,
-      includeArtist = true,
-      includeAlbum = true,
-      includeGenre = true
-    } = req.query;
+    const track = await Track.findById(req.params.id);
 
-    const similarTracks = await SimilarityService.findSimilarTracks(
-      req.params.id,
-      {
-        limit: parseInt(limit),
-        minScore: parseFloat(minScore),
-        includeArtistTracks: includeArtist === 'true',
-        includeAlbumTracks: includeAlbum === 'true',
-        includeGenreTracks: includeGenre === 'true'
-      }
-    );
-
-    res.json({
-      sourceTrackId: req.params.id,
-      similarTracks,
-      count: similarTracks.length,
-      filters: {
-        limit,
-        minScore,
-        includeArtist,
-        includeAlbum,
-        includeGenre
-      }
-    });
-  } catch (error) {
-    logger.error('Error finding similar tracks:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-// Trouver des morceaux similaires par caractéristiques spécifiques
-router.get('/tracks/:id/similar-by-features', cacheQuery(3600), async (req, res) => {
-  try {
-    const { features = [] } = req.query;
-    const validFeatures = ['genre', 'duration', 'popularity'];
-    
-    // Valider les caractéristiques demandées
-    const requestedFeatures = Array.isArray(features) 
-      ? features 
-      : features.split(',');
-
-    const validatedFeatures = requestedFeatures.filter(
-      feature => validFeatures.includes(feature)
-    );
-
-    if (validatedFeatures.length === 0) {
-      return res.status(400).json({
-        error: 'No valid features specified',
-        validFeatures
-      });
+    if (!track) {
+      return res.status(404).json({ error: 'Track not found' });
     }
 
-    const similarTracks = await SimilarityService.findSimilarByFeatures(
-      req.params.id,
-      validatedFeatures
-    );
+    const similarTracks = await Track.find({
+      _id: { $ne: track._id },
+      $or: [
+        { genre: track.genre },
+        { artist: track.artist }
+      ]
+    })
+    .limit(10)
+    .populate('artist')
+    .populate('album');
 
-    res.json({
-      sourceTrackId: req.params.id,
-      similarTracks,
-      count: similarTracks.length,
-      features: validatedFeatures
-    });
+    res.json(similarTracks);
   } catch (error) {
-    logger.error('Error finding similar tracks by features:', error);
+    logger.error('Error fetching similar tracks:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });

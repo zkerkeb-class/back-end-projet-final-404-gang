@@ -30,7 +30,7 @@ const processImage = async (inputPath) => {
           quality: 85,
           format: 'webp'
         },
-        // Large size (1000x1000)
+        // Large size (1000x1000)  
         {
           width: 1000,
           height: 1000,
