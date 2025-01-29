@@ -1,4 +1,1763 @@
 {
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Music API",
+    "description": "API for managing music, artists, albums, tracks, playlists, and lyrics",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/api/artists": {
+      "get": {
+        "summary": "Get all artists",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["name", "popularity"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter by genre"
+          },
+          {
+            "in": "query",
+            "name": "minPopularity",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "description": "Minimum popularity score"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of artists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Artist"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new artist",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Artist created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Artist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/albums": {
+      "get": {
+        "summary": "Get all albums",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["title", "releaseDate", "trackCount"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter by genre"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of albums",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Album"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new album",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlbumInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Album created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Album"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tracks": {
+      "get": {
+        "summary": "Get all tracks",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["title", "duration", "popularity", "releaseDate"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter by genre"
+          },
+          {
+            "in": "query",
+            "name": "minDuration",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Minimum duration in seconds"
+          },
+          {
+            "in": "query",
+            "name": "maxDuration",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Maximum duration in seconds"
+          },
+          {
+            "in": "query",
+            "name": "minPopularity",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "description": "Minimum popularity score"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of tracks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Track"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new track",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrackInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Track created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Track"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/playlists": {
+      "get": {
+        "summary": "Get all playlists",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["name", "trackCount", "createdAt"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "minTracks",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Minimum number of tracks"
+          },
+          {
+            "in": "query",
+            "name": "maxTracks",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Maximum number of tracks"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of playlists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Playlist"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new playlist",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlaylistInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Playlist created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Playlist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search": {
+      "get": {
+        "summary": "Search across all entities",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search query"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "schema": {
+              "type": "string",
+              "enum": ["all", "tracks", "albums", "artists", "playlists"]
+            },
+            "description": "Type of entities to search"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 10
+            },
+            "description": "Number of items to return per type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tracks": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Track"
+                      }
+                    },
+                    "albums": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Album"
+                      }
+                    },
+                    "artists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Artist"
+                      }
+                    },
+                    "playlists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Playlist"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/lyrics/track/{trackId}": {
+      "get": {
+        "summary": "Get lyrics for a track",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "trackId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Track ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Track lyrics",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lyrics"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/lyrics/search": {
+      "get": {
+        "summary": "Search lyrics",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search query"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 10
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lyrics"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Artist": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "biography": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          },
+          "popularity": {
+            "type": "number"
+          },
+          "albums": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Album": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Track": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "album": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "popularity": {
+            "type": "number"
+          },
+          "audioUrl": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      },
+      "Playlist": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isPublic": {
+            "type": "boolean"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Lyrics": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "verses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Verse"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/LyricsMetadata"
+          }
+        }
+      },
+      "Images": {
+        "type": "object",
+        "properties": {
+          "thumbnail": {
+            "type": "string"
+          },
+          "small": {
+            "type": "string"
+          },
+          "medium": {
+            "type": "string"
+          },
+          "large": {
+            "type": "string"
+          }
+        }
+      },
+      "Verse": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "number"
+          },
+          "endTime": {
+            "type": "number"
+          }
+        }
+      },
+      "LyricsMetadata": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": ["User", "Official", "Community"]
+          },
+          "contributor": {
+            "type": "string"
+          },
+          "verifiedBy": {
+            "type": "string"
+          },
+          "lastUpdated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ArtistInput": {
+        "type": "object",
+        "required": ["name", "genre"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "biography": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      },
+      "AlbumInput": {
+        "type": "object",
+        "required": ["title", "artist"],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      },
+      "TrackInput": {
+        "type": "object",
+        "required": ["title", "artist", "album"],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "album": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "audioUrl": {
+            "type": "string"
+          }
+        }
+      },
+      "PlaylistInput": {
+        "type": "object",
+        "required": ["name", "createdBy"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isPublic": {
+            "type": "boolean",
+            "default": true
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      }
+    }
+  }
+}<<<<<<< jsp
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Music API",
+    "description": "API for managing music, artists, albums, tracks, playlists, and lyrics",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Development server"
+    }
+  ],
+  "paths": {
+    "/api/artists": {
+      "get": {
+        "summary": "Get all artists",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["name", "popularity"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter by genre"
+          },
+          {
+            "in": "query",
+            "name": "minPopularity",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "description": "Minimum popularity score"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of artists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Artist"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new artist",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ArtistInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Artist created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Artist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/albums": {
+      "get": {
+        "summary": "Get all albums",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["title", "releaseDate", "trackCount"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter by genre"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of albums",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Album"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new album",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlbumInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Album created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Album"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tracks": {
+      "get": {
+        "summary": "Get all tracks",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["title", "duration", "popularity", "releaseDate"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "genre",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Filter by genre"
+          },
+          {
+            "in": "query",
+            "name": "minDuration",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Minimum duration in seconds"
+          },
+          {
+            "in": "query",
+            "name": "maxDuration",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Maximum duration in seconds"
+          },
+          {
+            "in": "query",
+            "name": "minPopularity",
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "description": "Minimum popularity score"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of tracks",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Track"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new track",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrackInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Track created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Track"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/playlists": {
+      "get": {
+        "summary": "Get all playlists",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "sort",
+            "schema": {
+              "type": "string",
+              "enum": ["name", "trackCount", "createdAt"]
+            },
+            "description": "Sort field"
+          },
+          {
+            "in": "query",
+            "name": "order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            },
+            "description": "Sort order"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          },
+          {
+            "in": "query",
+            "name": "minTracks",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Minimum number of tracks"
+          },
+          {
+            "in": "query",
+            "name": "maxTracks",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Maximum number of tracks"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of playlists",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Playlist"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new playlist",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlaylistInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Playlist created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Playlist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search": {
+      "get": {
+        "summary": "Search across all entities",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search query"
+          },
+          {
+            "in": "query",
+            "name": "type",
+            "schema": {
+              "type": "string",
+              "enum": ["all", "tracks", "albums", "artists", "playlists"]
+            },
+            "description": "Type of entities to search"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 10
+            },
+            "description": "Number of items to return per type"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "tracks": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Track"
+                      }
+                    },
+                    "albums": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Album"
+                      }
+                    },
+                    "artists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Artist"
+                      }
+                    },
+                    "playlists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Playlist"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/lyrics/track/{trackId}": {
+      "get": {
+        "summary": "Get lyrics for a track",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "trackId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Track ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Track lyrics",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Lyrics"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/lyrics/search": {
+      "get": {
+        "summary": "Search lyrics",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "q",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Search query"
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "schema": {
+              "type": "integer",
+              "default": 10
+            },
+            "description": "Number of items to return"
+          },
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer",
+              "default": 0
+            },
+            "description": "Number of items to skip"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lyrics"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Artist": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "biography": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          },
+          "popularity": {
+            "type": "number"
+          },
+          "albums": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Album": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Track": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "album": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "popularity": {
+            "type": "number"
+          },
+          "audioUrl": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      },
+      "Playlist": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isPublic": {
+            "type": "boolean"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Lyrics": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "verses": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Verse"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/LyricsMetadata"
+          }
+        }
+      },
+      "Images": {
+        "type": "object",
+        "properties": {
+          "thumbnail": {
+            "type": "string"
+          },
+          "small": {
+            "type": "string"
+          },
+          "medium": {
+            "type": "string"
+          },
+          "large": {
+            "type": "string"
+          }
+        }
+      },
+      "Verse": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "startTime": {
+            "type": "number"
+          },
+          "endTime": {
+            "type": "number"
+          }
+        }
+      },
+      "LyricsMetadata": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": ["User", "Official", "Community"]
+          },
+          "contributor": {
+            "type": "string"
+          },
+          "verifiedBy": {
+            "type": "string"
+          },
+          "lastUpdated": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ArtistInput": {
+        "type": "object",
+        "required": ["name", "genre"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "biography": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      },
+      "AlbumInput": {
+        "type": "object",
+        "required": ["title", "artist"],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "releaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      },
+      "TrackInput": {
+        "type": "object",
+        "required": ["title", "artist", "album"],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "artist": {
+            "type": "string"
+          },
+          "album": {
+            "type": "string"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "audioUrl": {
+            "type": "string"
+          }
+        }
+      },
+      "PlaylistInput": {
+        "type": "object",
+        "required": ["name", "createdBy"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "isPublic": {
+            "type": "boolean",
+            "default": true
+          },
+          "images": {
+            "$ref": "#/components/schemas/Images"
+          }
+        }
+      }
+    }
+  }
+}
+=======
+{
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
@@ -1338,3 +3097,4 @@
     "url": "https://github.com/your-repo/docs"
   }
 }
+
