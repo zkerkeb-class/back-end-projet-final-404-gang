@@ -15,6 +15,7 @@ const albumRoutes = require('./routes/albumRoutes');
 const trackRoutes = require('./routes/trackRoutes');
 const playlistRoutes = require('./routes/playlistRoutes');
 const lyricsRoutes = require('./routes/lyricsRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 const app = express();
 
@@ -52,6 +53,7 @@ const initializeApp = async () => {
     app.use('/api', playlistRoutes);
     app.use('/api/lyrics', lyricsRoutes);
     app.use('/monitor', monitorRoutes);
+    app.use('/api', userRoutes);
 
     // Health check endpoint
     app.get('/health', async (req, res) => {

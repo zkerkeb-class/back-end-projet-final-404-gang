@@ -1,15 +1,3 @@
-
-const mongoose = require('mongoose');
-
-const UserSchema = new mongoose.Schema({
-  username: { type: String, required: true, unique: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  playlists: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Playlist' }],
-}, { timestamps: true });
-
-module.exports = mongoose.model('User', UserSchema);
-=======
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs"); // Pour le hashage des mots de passe
 const jwt = require("jsonwebtoken");
