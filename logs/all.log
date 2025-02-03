@@ -3392,3 +3392,316 @@
 2025-02-03 17:08:17:817 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
 2025-02-03 17:10:21:1021 [32minfo[39m: [32mRedis Client Connected[39m
 2025-02-03 17:10:21:1021 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 19:16:41:1641 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:41:1641 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:41:1641 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:41:1641 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:41:1641 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:41:1641 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:41:1641 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:41:1641 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:41:1641 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:41:1641 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:41:1641 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:41:1641 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:41:1641 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:42:1642 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:42:1642 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:42:1642 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:42:1642 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:42:1642 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:42:1642 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:43:1643 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:43:1643 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:43:1643 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:43:1643 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:16:44:1644 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-03 19:16:44:1644 [31merror[39m: [31mRedis Client Error: connect ECONNREFUSED ::1:6379[39m
+2025-02-03 19:17:01:171 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 19:17:01:171 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 19:17:02:172 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 19:17:02:172 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:31:49:3149 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 19:31:49:3149 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 19:31:50:3150 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 19:31:50:3150 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:32:00:320 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:40:12:4012 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:44:05:445 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:15:4515 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:16:4516 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 19:45:16:4516 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:02:39:239 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:02:39:239 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:02:39:239 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:02:39:239 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:07:50:750 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:07:50:750 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:07:50:750 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:07:50:750 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:07:50:750 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:07:50:750 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:08:49:849 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:15:1315 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:40:1340 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:41:1341 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:41:1341 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:41:1341 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:41:1341 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:13:41:1341 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:15:57:1557 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:17:25:1725 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:26:55:2655 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 20:26:55:2655 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 20:26:55:2655 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 20:26:55:2655 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 20:27:01:271 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:02:272 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:02:272 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:02:272 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:22:2722 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:22:2722 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:22:2722 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:22:2722 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:22:2722 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:22:2722 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:38:2738 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:38:2738 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:38:2738 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:38:2738 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:38:2738 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:27:38:2738 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:25:2825 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:25:2825 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:25:2825 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:25:2825 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:25:2825 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:25:2825 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:40:2840 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:40:2840 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:40:2840 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:40:2840 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:40:2840 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:28:40:2840 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:17:3317 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:17:3317 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:17:3317 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:17:3317 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:17:3317 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:17:3317 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:55:3355 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:55:3355 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:55:3355 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:55:3355 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:55:3355 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:33:56:3356 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:39:03:393 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:39:03:393 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:39:03:393 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:39:03:393 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:39:03:393 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:39:03:393 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:43:48:4348 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:20:4520 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:20:4520 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:21:4521 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:21:4521 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:23:4523 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:23:4523 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:23:4523 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:23:4523 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:24:4524 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:24:4524 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:25:4525 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:25:4525 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:25:4525 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:25:4525 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:28:4528 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:28:4528 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:45:46:4546 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:46:4546 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:46:4546 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:45:46:4546 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:46:29:4629 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:46:29:4629 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:52:46:5246 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:52:46:5246 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:54:57:5457 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 20:54:57:5457 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 20:54:57:5457 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 20:54:57:5457 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 20:55:11:5511 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:55:11:5511 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 20:55:43:5543 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:55:43:5543 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:55:43:5543 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:55:43:5543 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:55:46:5546 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 20:55:46:5546 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 21:04:39:439 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:04:39:439 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:04:40:440 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:04:40:440 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:16:11:1611 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:16:11:1611 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:16:12:1612 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:16:12:1612 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:17:11:1711 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:17:11:1711 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:17:11:1711 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:17:11:1711 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:17:11:1711 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:11:1711 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:12:1712 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:27:1727 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:27:1727 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:27:1727 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:27:1727 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:27:1727 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:27:1727 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:53:1753 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:17:53:1753 [31merror[39m: [31mSearch error: AutoCompleteService.recordSearch is not a function[39m
+2025-02-03 21:19:38:1938 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:19:38:1938 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:19:38:1938 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:19:38:1938 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:19:43:1943 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:19:44:1944 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:19:44:1944 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:19:44:1944 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:19:46:1946 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:19:46:1946 [31merror[39m: [31mSearch error: text index required for $text query[39m
+2025-02-03 21:21:37:2137 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:21:37:2137 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:21:37:2137 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:21:37:2137 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:26:01:261 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:26:01:261 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:26:01:261 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:26:01:261 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:26:07:267 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:26:07:267 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:26:07:267 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:26:07:267 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:26:12:2612 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:26:12:2612 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:26:13:2613 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:26:13:2613 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:26:50:2650 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-03 21:26:50:2650 [32minfo[39m: [32mRedis connection established[39m
+2025-02-03 21:26:50:2650 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-03 21:26:50:2650 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-03 21:27:01:271 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:01:271 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:01:271 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:01:271 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:08:278 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:21:2721 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:27:2727 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:31:2731 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:32:2732 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:41:2741 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:27:50:2750 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:29:17:2917 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:29:24:2924 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:29:33:2933 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:29:35:2935 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:29:36:2936 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:29:59:2959 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-03 21:30:00:300 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m

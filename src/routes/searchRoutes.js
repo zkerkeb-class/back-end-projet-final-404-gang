@@ -8,55 +8,120 @@ const { cacheQuery } = require('../middleware/queryCache');
 const logger = require('../utils/logger');
 const AutoCompleteService = require('../services/autoComplete');
 
-// Recherche globale
+// Recherche globale avec support phonétique et similarité
 router.get('/search', cacheQuery(3600), async (req, res) => {
   try {
     const { q, type = 'all', limit = 10 } = req.query;
-    const results = {};
 
     if (!q) {
-      return res.status(400).json({ error: 'Query parameter is required' });
+      return res.status(400).json({ message: 'Query parameter is required' });
     }
 
-    // Enregistrer la recherche pour l'autocomplétion
-    await AutoCompleteService.recordSearch(q);
+    // Split query into keywords
+    const keywords = q.toLowerCase().split(/\s+/);
+    const results = {};
+
+    // Record search for autocomplete
+    await AutoCompleteService.addToSearchHistory('general', q);
+
+    // Build search query with multiple conditions
+    const searchQuery = {
+      $or: [
+        // Phonetic search
+        { phoneticCode: { $in: keywords.map(word => require('phonetics').metaphone(word)) } },
+        // Regex search for partial matches
+        { 
+          $or: keywords.map(keyword => ({
+            $or: [
+              { name: { $regex: keyword, $options: 'i' } },
+              { title: { $regex: keyword, $options: 'i' } }
+            ]
+          }))
+        }
+      ]
+    };
 
     if (type === 'all' || type === 'tracks') {
-      results.tracks = await Track.find({ 
-        $text: { $search: q }
-      })
-      .populate('artist album')
-      .limit(parseInt(limit));
+      results.tracks = await Track.find(searchQuery)
+        .populate({
+          path: 'artist',
+          select: 'name images'
+        })
+        .populate({
+          path: 'album',
+          select: 'title images'
+        })
+        .limit(parseInt(limit))
+        .select('title duration audioUrl images');
     }
 
     if (type === 'all' || type === 'albums') {
-      results.albums = await Album.find({ 
-        $text: { $search: q }
-      })
-      .populate('artist')
-      .limit(parseInt(limit));
+      results.albums = await Album.find(searchQuery)
+        .populate({
+          path: 'artist',
+          select: 'name'
+        })
+        .limit(parseInt(limit))
+        .select('title releaseDate images');
     }
 
     if (type === 'all' || type === 'artists') {
-      results.artists = await Artist.find({ 
-        $text: { $search: q }
-      })
-      .limit(parseInt(limit));
+      results.artists = await Artist.find(searchQuery)
+        .limit(parseInt(limit))
+        .select('name genre images popularity');
     }
 
     if (type === 'all' || type === 'playlists') {
-      results.playlists = await Playlist.find({ 
-        $text: { $search: q }
+      results.playlists = await Playlist.find({
+        name: { $regex: q, $options: 'i' }
       })
-      .limit(parseInt(limit));
+        .limit(parseInt(limit))
+        .select('name description images');
     }
 
-    res.json(results);
+    // Format response
+    const formattedResults = {
+      tracks: results.tracks?.map(track => ({
+        id: track._id,
+        title: track.title,
+        duration: track.duration,
+        audioUrl: track.audioUrl,
+        image: track.images?.medium || track.album?.images?.medium,
+        artist: track.artist?.name,
+        album: track.album?.title
+      })) || [],
+      
+      artists: results.artists?.map(artist => ({
+        id: artist._id,
+        name: artist.name,
+        genre: artist.genre,
+        image: artist.images?.medium,
+        popularity: artist.popularity
+      })) || [],
+      
+      albums: results.albums?.map(album => ({
+        id: album._id,
+        title: album.title,
+        image: album.images?.medium,
+        artist: album.artist?.name,
+        releaseDate: album.releaseDate
+      })) || [],
+      
+      playlists: results.playlists?.map(playlist => ({
+        id: playlist._id,
+        name: playlist.name,
+        description: playlist.description,
+        image: playlist.images?.medium
+      })) || []
+    };
+
+    res.json(formattedResults);
   } catch (error) {
     logger.error('Search error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ message: 'Internal server error', error: error.message });
   }
 });
+
 
 // Recherche de pistes
 router.get('/tracks', cacheQuery(3600), async (req, res) => {
