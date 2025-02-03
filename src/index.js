@@ -7,7 +7,7 @@ const logger = require('./utils/logger');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const uploadRoutes = require('./routes/uploadRoutes');
-const searchRoutes = require('./routes/searchRoutes');
+const searchRoutes = require('./routes/search');
 const connectDB = require('./utils/db');
 const monitorRoutes = require('./routes/monitorRoutes');
 const artistRoutes = require('./routes/artistRoutes');
@@ -45,8 +45,8 @@ const initializeApp = async () => {
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
     // API Routes
+    app.use('/api/search', searchRoutes);
     app.use('/api', uploadRoutes);
-    app.use('/api', searchRoutes);
     app.use('/api', artistRoutes);
     app.use('/api', albumRoutes);
     app.use('/api', trackRoutes);

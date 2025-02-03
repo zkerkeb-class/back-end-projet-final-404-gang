@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
+const searchRoutes = require('./routes/search');
 const audioRoutes = require('./routes/audioRoutes');
 const imageRoutes = require('./routes/imageRoutes');
 
-// Register audio routes
+// Register routes
+app.use('/api/search', searchRoutes);
 app.use('/api/audio', audioRoutes);
-
-// Register image routes
 app.use('/api/images', imageRoutes);
 
 // ... other middleware ...
