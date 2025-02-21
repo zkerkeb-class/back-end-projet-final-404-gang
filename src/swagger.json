@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Music API",
-    "description": "API for managing music, artists, albums, tracks, playlists, and lyrics",
+    "title": "Music Streaming API",
+    "description": "API for music streaming application with search, audio, and image management",
     "version": "1.0.0"
   },
   "servers": [
@@ -11,101 +11,317 @@
       "description": "Development server"
     }
   ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "SearchResponse": {
+        "type": "object",
+        "properties": {
+          "tracks": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Track" }
+          },
+          "artists": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Artist" }
+          },
+          "albums": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Album" }
+          },
+          "playlists": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Playlist" }
+          }
+        }
+      },
+      "Track": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "artist": { "$ref": "#/components/schemas/Artist" },
+          "album": { "$ref": "#/components/schemas/Album" },
+          "duration": { "type": "number" },
+          "audioUrl": { "type": "string" },
+          "audioFormats": {
+            "type": "object",
+            "properties": {
+              "mp3": { "type": "string" },
+              "wav": { "type": "string" },
+              "aac": { "type": "string" }
+            }
+          },
+          "genre": { "type": "string" },
+          "images": { "$ref": "#/components/schemas/Images" }
+        }
+      },
+      "Artist": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "genre": { "type": "string" },
+          "popularity": { "type": "number" },
+          "images": { "$ref": "#/components/schemas/Images" }
+        }
+      },
+      "Album": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "artist": { "$ref": "#/components/schemas/Artist" },
+          "releaseDate": { "type": "string", "format": "date" },
+          "images": { "$ref": "#/components/schemas/Images" }
+        }
+      },
+      "Images": {
+        "type": "object",
+        "properties": {
+          "original": { "type": "string" },
+          "thumbnail": { "type": "string" },
+          "small": { "type": "string" },
+          "medium": { "type": "string" },
+          "large": { "type": "string" }
+        }
+      },
+      "Playlist": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "createdBy": { "type": "string" },
+          "isPublic": { "type": "boolean" },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Track"
+            }
+          },
+          "images": { "$ref": "#/components/schemas/Images" },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" },
+          "error": { "type": "string" }
+        }
+      },
+      "Genre": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "trackCount": { "type": "integer" },
+          "artistCount": { "type": "integer" },
+          "color": { "type": "string" }
+        }
+      },
+      "GenreSearchResponse": {
+        "type": "object",
+        "properties": {
+          "tracks": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Track" }
+          },
+          "artists": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Artist" }
+          },
+          "albums": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Album" }
+          }
+        }
+      },
+      "ValidationError": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field": { "type": "string" },
+                "message": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "UnauthorizedError": {
+        "description": "Authentication information is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NotFoundError": {
+        "description": "The specified resource was not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "description": "Validation failed",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ValidationError"
+            }
+          }
+        }
+      },
+      "ServerError": {
+        "description": "Internal server error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    }
+  },
   "paths": {
-    "/api/artists": {
+    "/api/search": {
       "get": {
-        "summary": "Get all artists",
+        "summary": "Global search across all content",
         "parameters": [
           {
+            "name": "q",
             "in": "query",
-            "name": "sort",
-            "schema": {
-              "type": "string",
-              "enum": ["name", "popularity"]
-            },
-            "description": "Sort field"
-          },
-          {
-            "in": "query",
-            "name": "order",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            },
-            "description": "Sort order"
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "schema": {
-              "type": "integer",
-              "default": 20
-            },
-            "description": "Number of items to return"
-          },
-          {
-            "in": "query",
-            "name": "offset",
-            "schema": {
-              "type": "integer",
-              "default": 0
-            },
-            "description": "Number of items to skip"
-          },
-          {
-            "in": "query",
-            "name": "genre",
-            "schema": {
-              "type": "string"
-            },
-            "description": "Filter by genre"
-          },
-          {
-            "in": "query",
-            "name": "minPopularity",
-            "schema": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 100
-            },
-            "description": "Minimum popularity score"
+            "required": true,
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
           "200": {
-            "description": "List of artists",
+            "description": "Search results",
             "content": {
               "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Artist"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "Create a new artist",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ArtistInput"
+                "schema": { "$ref": "#/components/schemas/SearchResponse" }
               }
             }
           }
         },
+        "tags": ["Search"]
+      }
+    },
+    "/api/search/advanced": {
+      "get": {
+        "summary": "Advanced search with filters",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["tracks", "artists", "albums"]
+            }
+          },
+          {
+            "name": "genre",
+            "in": "query",
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "yearFrom",
+            "in": "query",
+            "schema": { "type": "integer" }
+          },
+          {
+            "name": "yearTo",
+            "in": "query",
+            "schema": { "type": "integer" }
+          },
+          {
+            "name": "durationFrom",
+            "in": "query",
+            "schema": { "type": "integer" }
+          },
+          {
+            "name": "durationTo",
+            "in": "query",
+            "schema": { "type": "integer" }
+          },
+          {
+            "name": "popularityMin",
+            "in": "query",
+            "schema": { "type": "integer", "minimum": 0, "maximum": 100 }
+          },
+          {
+            "name": "popularityMax",
+            "in": "query",
+            "schema": { "type": "integer", "minimum": 0, "maximum": 100 }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["popularity", "title", "releaseDate", "duration"]
+            }
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"]
+            }
+          }
+        ],
         "responses": {
-          "201": {
-            "description": "Artist created successfully",
+          "200": {
+            "description": "Advanced search results",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Artist"
+                  "type": "object",
+                  "properties": {
+                    "results": {
+                      "type": "array",
+                      "items": { "$ref": "#/components/schemas/Track" }
+                    },
+                    "pagination": {
+                      "type": "object",
+                      "properties": {
+                        "total": { "type": "integer" },
+                        "offset": { "type": "integer" },
+                        "limit": { "type": "integer" },
+                        "hasMore": { "type": "boolean" }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -113,90 +329,19 @@
         }
       }
     },
-    "/api/albums": {
+    "/api/search/genres": {
       "get": {
-        "summary": "Get all albums",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "sort",
-            "schema": {
-              "type": "string",
-              "enum": ["title", "releaseDate", "trackCount"]
-            },
-            "description": "Sort field"
-          },
-          {
-            "in": "query",
-            "name": "order",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            },
-            "description": "Sort order"
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "schema": {
-              "type": "integer",
-              "default": 20
-            },
-            "description": "Number of items to return"
-          },
-          {
-            "in": "query",
-            "name": "offset",
-            "schema": {
-              "type": "integer",
-              "default": 0
-            },
-            "description": "Number of items to skip"
-          },
-          {
-            "in": "query",
-            "name": "genre",
-            "schema": {
-              "type": "string"
-            },
-            "description": "Filter by genre"
-          }
-        ],
+        "summary": "Get all available genres with styling",
         "responses": {
           "200": {
-            "description": "List of albums",
+            "description": "List of genres with styling information",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Album"
+                    "$ref": "#/components/schemas/Genre"
                   }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "Create a new album",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AlbumInput"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Album created successfully",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Album"
                 }
               }
             }
@@ -204,112 +349,86 @@
         }
       }
     },
-    "/api/tracks": {
+    "/api/search/genres/{genre}": {
       "get": {
-        "summary": "Get all tracks",
+        "summary": "Search content by genre",
         "parameters": [
           {
-            "in": "query",
-            "name": "sort",
-            "schema": {
-              "type": "string",
-              "enum": ["title", "duration", "popularity", "releaseDate"]
-            },
-            "description": "Sort field"
-          },
-          {
-            "in": "query",
-            "name": "order",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            },
-            "description": "Sort order"
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "schema": {
-              "type": "integer",
-              "default": 20
-            },
-            "description": "Number of items to return"
-          },
-          {
-            "in": "query",
-            "name": "offset",
-            "schema": {
-              "type": "integer",
-              "default": 0
-            },
-            "description": "Number of items to skip"
-          },
-          {
-            "in": "query",
             "name": "genre",
-            "schema": {
-              "type": "string"
-            },
-            "description": "Filter by genre"
-          },
-          {
-            "in": "query",
-            "name": "minDuration",
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Minimum duration in seconds"
-          },
-          {
-            "in": "query",
-            "name": "maxDuration",
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Maximum duration in seconds"
-          },
-          {
-            "in": "query",
-            "name": "minPopularity",
-            "schema": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 100
-            },
-            "description": "Minimum popularity score"
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
           "200": {
-            "description": "List of tracks",
+            "description": "Content filtered by genre",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Track"
-                  }
+                  "$ref": "#/components/schemas/GenreSearchResponse"
                 }
               }
             }
           }
         }
-      },
+      }
+    },
+    "/api/audio/upload": {
       "post": {
-        "summary": "Create a new track",
+        "summary": "Upload audio track",
+        "security": [{ "bearerAuth": [] }],
         "requestBody": {
-          "required": true,
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/TrackInput"
+                "type": "object",
+                "properties": {
+                  "audio": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "title": { "type": "string" },
+                  "artistId": { "type": "string" },
+                  "albumId": { "type": "string" },
+                  "genre": { "type": "string" }
+                }
               }
             }
           }
         },
         "responses": {
           "201": {
-            "description": "Track created successfully",
+            "description": "Track uploaded successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": { "type": "string" },
+                    "track": { "$ref": "#/components/schemas/Track" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/audio/{trackId}": {
+      "get": {
+        "summary": "Get track details",
+        "parameters": [
+          {
+            "name": "trackId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Track details",
             "content": {
               "application/json": {
                 "schema": {
@@ -319,65 +438,149 @@
             }
           }
         }
+      },
+      "delete": {
+        "summary": "Delete track",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "trackId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Track deleted successfully"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Update track details",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "trackId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "genre": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Track updated successfully"
+          }
+        }
+      }
+    },
+    "/api/images/artist/{artistId}": {
+      "post": {
+        "summary": "Upload artist image",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "artistId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Image uploaded successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": { "type": "string" },
+                    "artist": { "$ref": "#/components/schemas/Artist" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/images/album/{albumId}": {
+      "post": {
+        "summary": "Upload album cover",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "albumId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Album cover uploaded successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": { "type": "string" },
+                    "album": { "$ref": "#/components/schemas/Album" }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/api/playlists": {
       "get": {
-        "summary": "Get all playlists",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "sort",
-            "schema": {
-              "type": "string",
-              "enum": ["name", "trackCount", "createdAt"]
-            },
-            "description": "Sort field"
-          },
-          {
-            "in": "query",
-            "name": "order",
-            "schema": {
-              "type": "string",
-              "enum": ["asc", "desc"]
-            },
-            "description": "Sort order"
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "schema": {
-              "type": "integer",
-              "default": 20
-            },
-            "description": "Number of items to return"
-          },
-          {
-            "in": "query",
-            "name": "offset",
-            "schema": {
-              "type": "integer",
-              "default": 0
-            },
-            "description": "Number of items to skip"
-          },
-          {
-            "in": "query",
-            "name": "minTracks",
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Minimum number of tracks"
-          },
-          {
-            "in": "query",
-            "name": "maxTracks",
-            "schema": {
-              "type": "integer"
-            },
-            "description": "Maximum number of tracks"
-          }
-        ],
+        "summary": "Get user playlists",
+        "security": [{ "bearerAuth": [] }],
         "responses": {
           "200": {
             "description": "List of playlists",
@@ -395,13 +598,20 @@
         }
       },
       "post": {
-        "summary": "Create a new playlist",
+        "summary": "Create new playlist",
+        "security": [{ "bearerAuth": [] }],
         "requestBody": {
           "required": true,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PlaylistInput"
+                "type": "object",
+                "required": ["name"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "isPublic": { "type": "boolean" }
+                }
               }
             }
           }
@@ -420,148 +630,446 @@
         }
       }
     },
-    "/api/search": {
+    "/api/playlists/{playlistId}": {
       "get": {
-        "summary": "Search across all entities",
+        "summary": "Get playlist by ID",
         "parameters": [
           {
-            "in": "query",
-            "name": "q",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search query"
-          },
-          {
-            "in": "query",
-            "name": "type",
-            "schema": {
-              "type": "string",
-              "enum": ["all", "tracks", "albums", "artists", "playlists"]
-            },
-            "description": "Type of entities to search"
-          },
-          {
-            "in": "query",
-            "name": "limit",
-            "schema": {
-              "type": "integer",
-              "default": 10
-            },
-            "description": "Number of items to return per type"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Search results",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "tracks": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/Track"
-                      }
-                    },
-                    "albums": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/Album"
-                      }
-                    },
-                    "artists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/Artist"
-                      }
-                    },
-                    "playlists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/Playlist"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/lyrics/track/{trackId}": {
-      "get": {
-        "summary": "Get lyrics for a track",
-        "parameters": [
-          {
+            "name": "playlistId",
             "in": "path",
-            "name": "trackId",
             "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Track ID"
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
           "200": {
-            "description": "Track lyrics",
+            "description": "Playlist details",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Lyrics"
+                  "$ref": "#/components/schemas/Playlist"
                 }
               }
             }
           }
         }
-      }
-    },
-    "/api/lyrics/search": {
-      "get": {
-        "summary": "Search lyrics",
+      },
+      "patch": {
+        "summary": "Update playlist",
+        "security": [{ "bearerAuth": [] }],
         "parameters": [
           {
-            "in": "query",
-            "name": "q",
+            "name": "playlistId",
+            "in": "path",
             "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "description": "Search query"
-          },
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "isPublic": { "type": "boolean" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Playlist updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Playlist"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete playlist",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
           {
-            "in": "query",
-            "name": "limit",
-            "schema": {
-              "type": "integer",
-              "default": 10
-            },
-            "description": "Number of items to return"
-          },
-          {
-            "in": "query",
-            "name": "offset",
-            "schema": {
-              "type": "integer",
-              "default": 0
-            },
-            "description": "Number of items to skip"
+            "name": "playlistId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
           }
         ],
         "responses": {
           "200": {
-            "description": "Search results",
+            "description": "Playlist deleted successfully"
+          }
+        }
+      }
+    },
+    "/api/search/suggestions": {
+      "get": {
+        "summary": "Get search suggestions",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "Search query"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": { 
+              "type": "integer",
+              "default": 5
+            },
+            "description": "Number of suggestions to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search suggestions",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Lyrics"
+                    "type": "string"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/suggestions/trending": {
+      "get": {
+        "summary": "Get trending searches",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": { 
+              "type": "integer",
+              "default": 10
+            },
+            "description": "Number of trending searches to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Trending searches",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/playlists/{playlistId}/tracks": {
+      "post": {
+        "summary": "Add track to playlist",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "playlistId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["trackId"],
+                "properties": {
+                  "trackId": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Track added to playlist successfully"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remove track from playlist",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "playlistId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "trackId",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Track removed from playlist successfully"
+          }
+        }
+      }
+    },
+    "/api/images/{type}/{id}": {
+      "delete": {
+        "summary": "Delete image",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["artist", "album"]
+            }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Image deleted successfully"
+          }
+        }
+      }
+    },
+    "/api/audio/stream/{trackId}": {
+      "get": {
+        "summary": "Stream audio track",
+        "tags": ["Audio"],
+        "parameters": [
+          {
+            "name": "trackId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "quality",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": ["low", "medium", "high"],
+              "default": "medium"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Audio stream",
+            "content": {
+              "audio/*": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/audio/convert": {
+      "post": {
+        "summary": "Convert audio format",
+        "tags": ["Audio"],
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "audio": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "format": {
+                    "type": "string",
+                    "enum": ["mp3", "wav", "aac"]
+                  },
+                  "bitrate": {
+                    "type": "string",
+                    "enum": ["128k", "192k", "320k"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Audio converted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "url": { "type": "string" },
+                    "format": { "type": "string" },
+                    "duration": { "type": "number" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/images/process": {
+      "post": {
+        "summary": "Process and optimize image",
+        "tags": ["Images"],
+        "security": [{ "bearerAuth": [] }],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "width": { "type": "integer" },
+                  "height": { "type": "integer" },
+                  "quality": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 100
+                  },
+                  "format": {
+                    "type": "string",
+                    "enum": ["jpeg", "png", "webp"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Image processed successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Images"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/playlists/{playlistId}/reorder": {
+      "patch": {
+        "summary": "Reorder tracks in playlist",
+        "tags": ["Playlists"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "playlistId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["trackId", "newPosition"],
+                "properties": {
+                  "trackId": { "type": "string" },
+                  "newPosition": { "type": "integer", "minimum": 0 }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tracks reordered successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Playlist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/playlists/{playlistId}/tracks/batch": {
+      "post": {
+        "summary": "Add multiple tracks to playlist",
+        "tags": ["Playlists"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "playlistId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["trackIds"],
+                "properties": {
+                  "trackIds": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tracks added successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Playlist"
                 }
               }
             }
@@ -570,310 +1078,22 @@
       }
     }
   },
-  "components": {
-    "schemas": {
-      "Artist": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "biography": {
-            "type": "string"
-          },
-          "genre": {
-            "type": "string"
-          },
-          "images": {
-            "$ref": "#/components/schemas/Images"
-          },
-          "popularity": {
-            "type": "number"
-          },
-          "albums": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "tracks": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
-      "Album": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "artist": {
-            "type": "string"
-          },
-          "releaseDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "genre": {
-            "type": "string"
-          },
-          "images": {
-            "$ref": "#/components/schemas/Images"
-          },
-          "tracks": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
-      "Track": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "artist": {
-            "type": "string"
-          },
-          "album": {
-            "type": "string"
-          },
-          "duration": {
-            "type": "number"
-          },
-          "genre": {
-            "type": "string"
-          },
-          "releaseDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "popularity": {
-            "type": "number"
-          },
-          "audioUrl": {
-            "type": "string"
-          },
-          "images": {
-            "$ref": "#/components/schemas/Images"
-          }
-        }
-      },
-      "Playlist": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "createdBy": {
-            "type": "string"
-          },
-          "tracks": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "isPublic": {
-            "type": "boolean"
-          },
-          "images": {
-            "$ref": "#/components/schemas/Images"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "Lyrics": {
-        "type": "object",
-        "properties": {
-          "_id": {
-            "type": "string"
-          },
-          "track": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "language": {
-            "type": "string"
-          },
-          "verses": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Verse"
-            }
-          },
-          "metadata": {
-            "$ref": "#/components/schemas/LyricsMetadata"
-          }
-        }
-      },
-      "Images": {
-        "type": "object",
-        "properties": {
-          "thumbnail": {
-            "type": "string"
-          },
-          "small": {
-            "type": "string"
-          },
-          "medium": {
-            "type": "string"
-          },
-          "large": {
-            "type": "string"
-          }
-        }
-      },
-      "Verse": {
-        "type": "object",
-        "properties": {
-          "content": {
-            "type": "string"
-          },
-          "startTime": {
-            "type": "number"
-          },
-          "endTime": {
-            "type": "number"
-          }
-        }
-      },
-      "LyricsMetadata": {
-        "type": "object",
-        "properties": {
-          "source": {
-            "type": "string",
-            "enum": ["User", "Official", "Community"]
-          },
-          "contributor": {
-            "type": "string"
-          },
-          "verifiedBy": {
-            "type": "string"
-          },
-          "lastUpdated": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "ArtistInput": {
-        "type": "object",
-        "required": ["name", "genre"],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "biography": {
-            "type": "string"
-          },
-          "genre": {
-            "type": "string"
-          },
-          "images": {
-            "$ref": "#/components/schemas/Images"
-          }
-        }
-      },
-      "AlbumInput": {
-        "type": "object",
-        "required": ["title", "artist"],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "artist": {
-            "type": "string"
-          },
-          "releaseDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "genre": {
-            "type": "string"
-          },
-          "images": {
-            "$ref": "#/components/schemas/Images"
-          }
-        }
-      },
-      "TrackInput": {
-        "type": "object",
-        "required": ["title", "artist", "album"],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "artist": {
-            "type": "string"
-          },
-          "album": {
-            "type": "string"
-          },
-          "duration": {
-            "type": "number"
-          },
-          "genre": {
-            "type": "string"
-          },
-          "audioUrl": {
-            "type": "string"
-          }
-        }
-      },
-      "PlaylistInput": {
-        "type": "object",
-        "required": ["name", "createdBy"],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "createdBy": {
-            "type": "string"
-          },
-          "tracks": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "isPublic": {
-            "type": "boolean",
-            "default": true
-          },
-          "images": {
-            "$ref": "#/components/schemas/Images"
-          }
-        }
-      }
+  "tags": [
+    {
+      "name": "Search",
+      "description": "Search related endpoints"
+    },
+    {
+      "name": "Audio",
+      "description": "Audio track management"
+    },
+    {
+      "name": "Images",
+      "description": "Image management"
+    },
+    {
+      "name": "Playlists",
+      "description": "Playlist management"
     }
-  }
+  ]
 }

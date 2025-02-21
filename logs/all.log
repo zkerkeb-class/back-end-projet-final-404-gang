@@ -4444,3 +4444,90 @@
 2025-02-04 11:41:09:419 [32minfo[39m: [32mRedis connection established[39m
 2025-02-04 11:41:09:419 [32minfo[39m: [32mMongoDB connected successfully[39m
 2025-02-04 11:41:09:419 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 12:45:15:4515 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 12:45:15:4515 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 12:45:15:4515 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 12:52:40:5240 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 12:52:40:5240 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 12:52:40:5240 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 12:52:40:5240 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 12:53:43:5343 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 12:53:43:5343 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 12:53:43:5343 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 12:53:43:5343 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 12:53:51:5351 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 12:53:51:5351 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 12:53:51:5351 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 12:53:51:5351 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 13:00:36:036 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 13:00:36:036 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 13:00:37:037 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 13:00:37:037 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 13:04:59:459 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 13:04:59:459 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 13:05:00:50 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 13:05:00:50 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 13:07:28:728 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 13:07:28:728 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 13:07:29:729 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 13:07:29:729 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 13:13:06:136 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 13:13:07:137 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 13:13:07:137 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 13:13:07:137 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-04 13:16:38:1638 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-04 13:16:38:1638 [32minfo[39m: [32mRedis connection established[39m
+2025-02-04 13:16:39:1639 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-04 13:16:39:1639 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 15:38:26:3826 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 15:38:26:3826 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 15:38:27:3827 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 15:38:27:3827 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 15:39:09:399 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 15:39:09:399 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 15:39:09:399 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 15:39:09:399 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 15:40:06:406 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 15:40:06:406 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 15:40:07:407 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 15:40:07:407 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 15:41:41:4141 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 15:41:41:4141 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 15:41:42:4142 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 15:41:42:4142 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 15:44:07:447 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 15:44:07:447 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 15:44:07:447 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 15:44:07:447 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 15:44:12:4412 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 15:44:12:4412 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 15:44:12:4412 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 15:44:12:4412 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 15:49:02:492 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 15:49:02:492 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 15:49:03:493 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 15:49:03:493 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 16:36:40:3640 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 16:36:40:3640 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 16:36:40:3640 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 16:36:40:3640 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 16:49:41:4941 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 16:49:41:4941 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 16:49:42:4942 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 16:49:42:4942 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 16:53:37:5337 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 16:53:37:5337 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 16:53:38:5338 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 16:53:38:5338 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 16:53:55:5355 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 16:53:55:5355 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 16:53:56:5356 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 16:53:56:5356 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 16:54:10:5410 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 16:54:10:5410 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 16:54:11:5411 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 16:54:11:5411 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-06 17:05:59:559 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-06 17:05:59:559 [32minfo[39m: [32mRedis connection established[39m
+2025-02-06 17:06:00:60 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-06 17:06:00:60 [32minfo[39m: [32mServer running on http://localhost:3001[39m

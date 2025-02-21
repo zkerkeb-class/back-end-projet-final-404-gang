@@ -16,8 +16,14 @@ const trackRoutes = require('./routes/trackRoutes');
 const playlistRoutes = require('./routes/playlistRoutes');
 const lyricsRoutes = require('./routes/lyricsRoutes');
 const userRoutes = require('./routes/userRoutes');
+const SocketServer = require('./socket/socketServer');
+const roomRoutes = require('./routes/roomRoutes');
+const http = require('http');
+
 
 const app = express();
+const server = http.createServer(app);
+const socketServer = new SocketServer(server);
 
 const initializeApp = async () => {
   try {
@@ -54,6 +60,7 @@ const initializeApp = async () => {
     app.use('/api/lyrics', lyricsRoutes);
     app.use('/monitor', monitorRoutes);
     app.use('/api', userRoutes);
+    app.use('/api/rooms', roomRoutes);
 
     // Health check endpoint
     app.get('/health', async (req, res) => {
@@ -76,7 +83,7 @@ const initializeApp = async () => {
     // Connect to MongoDB and start server
     await connectDB();
     const PORT = process.env.PORT || 3001;
-    app.listen(PORT, () => {
+    server.listen(PORT, () => {
       logger.info(`Server running on http://localhost:${PORT}`);
     });
   } catch (error) {

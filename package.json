@@ -33,9 +33,12 @@
     "phonetics": "^1.0.7",
     "redis": "^4.7.0",
     "sharp": "^0.33.5",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "spotify-clone-back": "file:",
     "supertest": "^7.0.0",
     "swagger-ui-express": "^5.0.1",
+    "uuid": "^11.0.5",
     "winston": "^3.17.0"
   },
   "devDependencies": {
