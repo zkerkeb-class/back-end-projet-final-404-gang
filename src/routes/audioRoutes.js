@@ -5,11 +5,18 @@ const { convertAndUploadAudio, deleteAudio } = require('../utils/audioConversion
 const logger = require('../utils/logger');
 const Track = require('../models/Track');
 const auth = require('../middleware/auth');
+const fs = require('fs');
+const path = require('path');
 
 // Configure multer for audio file uploads
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, '/tmp/audio-uploads') // Temporary storage
+    const uploadDir = '/tmp/audio-uploads';
+    // Créer le dossier s'il n'existe pas
+    if (!fs.existsSync(uploadDir)) {
+      fs.mkdirSync(uploadDir, { recursive: true });
+    }
+    cb(null, uploadDir);
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
@@ -33,7 +40,8 @@ const upload = multer({
 });
 
 // Upload and convert audio file
-router.post('/upload', auth, upload.single('audio'), async (req, res) => {
+// auth 
+router.post('/upload', upload.single('audio'), async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({ message: 'No audio file provided' });

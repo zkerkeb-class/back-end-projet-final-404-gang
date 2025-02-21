@@ -3,6 +3,7 @@ const router = express.Router();
 const Playlist = require('../models/Playlist');
 const { cacheQuery } = require('../middleware/queryCache');
 const logger = require('../utils/logger');
+const getRedisConnection = require('../config/redis');
 
 // Get all playlists
 router.get('/playlists', cacheQuery(3600), async (req, res) => {
@@ -10,7 +11,7 @@ router.get('/playlists', cacheQuery(3600), async (req, res) => {
     const { 
       sort = 'name',
       order = 'asc',
-      limit = 20,
+      limit = 100,
       offset = 0,
       minTracks,
       maxTracks
@@ -84,21 +85,39 @@ router.get('/playlists/:id', cacheQuery(3600), async (req, res) => {
 // Create new playlist
 router.post('/playlists', async (req, res) => {
   try {
-    const { name, description, tracks = [] } = req.body;
+    const { name, description, tracks = [],createdBy="admin" } = req.body;
 
     if (!name) {
       return res.status(400).json({ error: 'Playlist name is required' });
     }
-
+    if (!createdBy) {
+      return res.status(400).json({ error: 'L\'identifiant du créateur (createdBy) est requis' });
+    }
     const playlist = new Playlist({
       name,
       description,
       tracks,
       trackCount: tracks.length,
+      createdBy,
       createdAt: new Date()
     });
 
     await playlist.save();
+       // Suppression explicite du cache
+       try {
+        const redis = await getRedisConnection();
+        // Récupérer toutes les clés qui correspondent au pattern
+        const keys = await redis.queryCache.keys('query:/api/playlists*');
+        console.log('Clés à supprimer:', keys);
+  
+        // Supprimer chaque clé trouvée
+        if (keys.length > 0) {
+          await Promise.all(keys.map(key => redis.queryCache.del(key)));
+          console.log('Cache supprimé pour les clés:', keys);
+        }
+      } catch (cacheError) {
+        logger.error('Erreur lors de la suppression du cache:', cacheError);
+      }
     res.status(201).json(playlist);
   } catch (error) {
     logger.error('Error creating playlist:', error);
@@ -125,13 +144,27 @@ router.put('/playlists/:id', async (req, res) => {
     }
 
     await playlist.save();
+       // Suppression explicite du cache
+       try {
+        const redis = await getRedisConnection();
+        // Récupérer toutes les clés qui correspondent au pattern
+        const keys = await redis.queryCache.keys('query:/api/playlists*');
+        console.log('Clés à supprimer:', keys);
+  
+        // Supprimer chaque clé trouvée
+        if (keys.length > 0) {
+          await Promise.all(keys.map(key => redis.queryCache.del(key)));
+          console.log('Cache supprimé pour les clés:', keys);
+        }
+      } catch (cacheError) {
+        logger.error('Erreur lors de la suppression du cache:', cacheError);
+      }
     res.json(playlist);
   } catch (error) {
     logger.error('Error updating playlist:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-
 // Delete playlist
 router.delete('/playlists/:id', async (req, res) => {
   try {
@@ -141,10 +174,31 @@ router.delete('/playlists/:id', async (req, res) => {
       return res.status(404).json({ error: 'Playlist not found' });
     }
 
-    await playlist.remove();
-    res.json({ message: 'Playlist deleted successfully' });
+    // Utiliser deleteOne au lieu de remove
+    await Playlist.deleteOne({ _id: req.params.id });
+
+    // Invalider le cache des playlists
+    try {
+      const redis = await getRedisConnection();
+      // Récupérer toutes les clés qui correspondent au pattern
+      const keys = await redis.queryCache.keys('query:/api/playlists*');
+      console.log('Clés à supprimer:', keys);
+
+      // Supprimer chaque clé trouvée
+      if (keys.length > 0) {
+        await Promise.all(keys.map(key => redis.queryCache.del(key)));
+        console.log('Cache supprimé pour les clés:', keys);
+      }
+    } catch (cacheError) {
+      logger.error('Erreur lors de la suppression du cache:', cacheError);
+    }
+
+    res.json({ message: 'Playlist supprimée avec succès' });
   } catch (error) {
     logger.error('Error deleting playlist:', error);
+    if (error.name === 'CastError') {
+      return res.status(400).json({ error: 'ID de playlist invalide' });
+    }
     res.status(500).json({ error: 'Internal server error' });
   }
 });

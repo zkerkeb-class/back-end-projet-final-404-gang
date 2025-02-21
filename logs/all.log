@@ -4444,3 +4444,684 @@
 2025-02-04 11:41:09:419 [32minfo[39m: [32mRedis connection established[39m
 2025-02-04 11:41:09:419 [32minfo[39m: [32mMongoDB connected successfully[39m
 2025-02-04 11:41:09:419 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:52:5152 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:52:5152 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:52:5152 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:52:5152 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:52:5152 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:52:5152 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:53:5153 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:53:5153 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:53:5153 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:53:5153 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:53:5153 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:53:5153 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:54:5154 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:54:5154 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:55:5155 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:55:5155 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:55:5155 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:55:5155 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:56:5156 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:56:5156 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:56:5156 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:56:5156 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:57:5157 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:57:5157 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:57:5157 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:57:5157 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:58:5158 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:58:5158 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:58:5158 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:58:5158 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:59:5159 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:59:5159 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:59:5159 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:51:59:5159 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:00:520 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:00:520 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:00:520 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:00:520 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:01:521 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:01:521 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:01:521 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:01:521 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:02:522 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:02:522 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:02:522 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:02:522 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:03:523 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:03:523 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:03:523 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:03:523 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:04:524 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:04:524 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:04:524 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:04:524 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:05:525 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:05:525 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:05:525 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:05:525 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:06:526 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:06:526 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:06:526 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:06:526 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:07:527 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:07:527 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:07:527 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:07:527 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:08:528 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:08:528 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:08:528 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:08:528 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:09:529 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:09:529 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:09:529 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:09:529 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:10:5210 [32minfo[39m: [32mRedis Client Reconnecting[39m
+2025-02-08 11:52:10:5210 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:57:5257 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 11:52:57:5257 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 11:52:57:5257 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 11:52:58:5258 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 11:57:58:5758 [31merror[39m: [31mError creating artist: Artist validation failed: genre: Path `genre` is required.[39m
+2025-02-08 11:58:17:5817 [31merror[39m: [31mError creating artist: Artist validation failed: genre: Path `genre` is required.[39m
+2025-02-08 11:59:28:5928 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 11:59:28:5928 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 11:59:28:5928 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 11:59:28:5928 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:00:13:013 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:00:13:013 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:00:13:013 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:00:13:013 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:11:57:1157 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:11:57:1157 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:11:57:1157 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:11:57:1157 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:17:59:1759 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:17:59:1759 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:17:59:1759 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:17:59:1759 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:19:07:197 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:19:07:197 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:19:07:197 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:19:07:197 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:19:39:1939 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:19:39:1939 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:19:40:1940 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:19:40:1940 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:20:04:204 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:20:04:204 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:20:04:204 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:20:04:204 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:20:57:2057 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:20:57:2057 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:20:59:2059 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:20:59:2059 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:23:32:2332 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:23:32:2332 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:23:32:2332 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:23:32:2332 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:23:48:2348 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:23:48:2348 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:23:48:2348 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:23:48:2348 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:25:33:2533 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:25:33:2533 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:25:33:2533 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:25:33:2533 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:27:03:273 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:27:03:273 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:27:04:274 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:27:04:274 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:27:18:2718 [31merror[39m: [31mError deleting artist: artist.remove is not a function[39m
+2025-02-08 12:27:58:2758 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:27:58:2758 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:27:59:2759 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:27:59:2759 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:29:29:2929 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:29:29:2929 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:29:29:2929 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:29:29:2929 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:29:30:2930 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:29:30:2930 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:29:31:2931 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:29:31:2931 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:34:45:3445 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:34:45:3445 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:34:45:3445 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:34:45:3445 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:34:49:3449 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:34:49:3449 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:34:50:3450 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:34:50:3450 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:37:27:3727 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:37:27:3727 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:37:27:3727 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:37:27:3727 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:45:18:4518 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:45:18:4518 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:45:18:4518 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:45:18:4518 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:46:15:4615 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:46:15:4615 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:46:15:4615 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:46:15:4615 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 12:46:27:4627 [31merror[39m: [31mErreur lors de la suppression du cache: getRedisConnection is not defined[39m
+2025-02-08 12:46:44:4644 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 12:46:44:4644 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 12:46:44:4644 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 12:46:44:4644 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 13:59:05:595 [31merror[39m: [31mError creating playlist: Playlist validation failed: createdBy: Path `createdBy` is required.[39m
+2025-02-08 14:00:14:014 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:00:14:014 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:00:19:019 [33mwarn[39m: [33mOperation failed (attempt 1/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:00:26:026 [33mwarn[39m: [33mOperation failed (attempt 2/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:00:35:035 [33mwarn[39m: [33mOperation failed (attempt 3/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:00:48:048 [33mwarn[39m: [33mOperation failed (attempt 4/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:01:03:13 [31merror[39m: [31mError connecting to MongoDB:[39m
+2025-02-08 14:01:17:117 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:01:17:117 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:01:22:122 [33mwarn[39m: [33mOperation failed (attempt 1/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:01:29:129 [33mwarn[39m: [33mOperation failed (attempt 2/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:01:38:138 [33mwarn[39m: [33mOperation failed (attempt 3/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:01:47:147 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:01:47:147 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:01:52:152 [33mwarn[39m: [33mOperation failed (attempt 1/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:01:59:159 [33mwarn[39m: [33mOperation failed (attempt 2/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:02:05:25 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:02:05:25 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:02:10:210 [33mwarn[39m: [33mOperation failed (attempt 1/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:02:17:217 [33mwarn[39m: [33mOperation failed (attempt 2/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:02:26:226 [33mwarn[39m: [33mOperation failed (attempt 3/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:02:39:239 [33mwarn[39m: [33mOperation failed (attempt 4/5): Server selection timed out after 5000 ms[39m
+2025-02-08 14:02:54:254 [31merror[39m: [31mError connecting to MongoDB:[39m
+2025-02-08 14:04:15:415 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:04:15:415 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:04:15:415 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 14:04:15:415 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 14:04:28:428 [31merror[39m: [31mError creating playlist: Playlist validation failed: createdBy: Path `createdBy` is required.[39m
+2025-02-08 14:04:39:439 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:04:39:439 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:04:40:440 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 14:04:40:440 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 14:04:41:441 [31merror[39m: [31mError creating playlist: createdBy is not defined[39m
+2025-02-08 14:05:00:50 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:05:00:50 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:05:00:50 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 14:05:00:50 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 14:05:01:51 [31merror[39m: [31mError creating playlist: Playlist validation failed: createdBy: Path `createdBy` is required.[39m
+2025-02-08 14:06:05:65 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:06:06:66 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:06:06:66 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 14:06:06:66 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 14:07:33:733 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 14:07:33:733 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 14:07:33:733 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 14:07:33:733 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 17:33:27:3327 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 17:33:27:3327 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 17:33:32:3332 [33mwarn[39m: [33mOperation failed (attempt 1/5): Server selection timed out after 5000 ms[39m
+2025-02-08 17:33:40:3340 [33mwarn[39m: [33mOperation failed (attempt 2/5): Server selection timed out after 5000 ms[39m
+2025-02-08 17:33:49:3349 [33mwarn[39m: [33mOperation failed (attempt 3/5): Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/[39m
+2025-02-08 17:33:57:3357 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 17:33:57:3357 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 17:34:02:342 [33mwarn[39m: [33mOperation failed (attempt 1/5): Server selection timed out after 5000 ms[39m
+2025-02-08 17:34:09:349 [33mwarn[39m: [33mOperation failed (attempt 2/5): Server selection timed out after 5000 ms[39m
+2025-02-08 17:34:14:3414 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 17:34:14:3414 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-08 18:36:02:362 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-08 18:36:02:362 [32minfo[39m: [32mRedis connection established[39m
+2025-02-08 18:36:02:362 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-08 18:36:02:362 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:09:47:947 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:09:47:947 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:09:47:947 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:09:47:947 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:10:02:102 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:10:02:102 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:10:03:103 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:10:03:103 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:11:45:1145 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:11:45:1145 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:11:45:1145 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:11:45:1145 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:15:39:1539 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:15:39:1539 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:15:40:1540 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:15:40:1540 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:18:54:1854 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:18:54:1854 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:18:55:1855 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:18:55:1855 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:19:03:193 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 1 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:11:1911 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:12:1912 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 3 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:13:1913 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 3 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 4 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:13:1913 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 3 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 4 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 5 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:22:09:229 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:22:09:229 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:22:09:229 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:22:09:229 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:29:43:2943 [31merror[39m: [31mError fetching track: Cast to ObjectId failed for value "upload" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:35:14:3514 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 0 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 1 },\n" +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 2 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 3 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 4 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 5 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 6 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 7 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:35:16:3516 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 0 },\n" +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 1 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 2 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 3 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 4 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 5 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 6 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 7 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:35:17:3517 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 0 },\n" +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 1 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 2 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 3 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 4 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 5 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 6 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 7 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:35:26:3526 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 0 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 1 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 2 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 3 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 4 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 5 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 6 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 7 },\n" +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:39:29:3929 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:39:29:3929 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:39:29:3929 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:39:29:3929 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:39:38:3938 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "csrf-token" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:39:38:3938 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "csrf-token" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:18:4218 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:18:4218 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:42:4242 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:42:42:4242 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:42:43:4243 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:42:43:4243 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:42:46:4246 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:46:4246 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:58:4258 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:58:4258 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:43:24:4324 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:43:24:4324 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:43:24:4324 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:43:24:4324 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:43:43:4343 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:43:43:4343 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:43:43:4343 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:43:43:4343 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:49:04:494 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:49:04:494 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:49:04:494 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:49:04:494 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-09 12:49:35:4935 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-09 12:49:35:4935 [32minfo[39m: [32mRedis connection established[39m
+2025-02-09 12:49:36:4936 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-09 12:49:36:4936 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-10 19:51:09:519 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-10 19:51:09:519 [32minfo[39m: [32mRedis connection established[39m
+2025-02-10 19:51:10:5110 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-10 19:51:10:5110 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-13 19:30:53:3053 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-13 19:30:53:3053 [32minfo[39m: [32mRedis connection established[39m
+2025-02-13 19:30:53:3053 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-13 19:30:53:3053 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-13 19:35:46:3546 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:08:398 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 1 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 2 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 3 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 4 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:10:3910 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 1 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 2 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 3 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 4 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:11:3911 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 1 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 2 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 3 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 4 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:12:3912 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 1 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 2 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 3 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 4 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:45:23:4523 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-13 19:45:23:4523 [32minfo[39m: [32mRedis connection established[39m
+2025-02-13 19:45:23:4523 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-13 19:45:23:4523 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-13 19:45:27:4527 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-13 19:45:27:4527 [32minfo[39m: [32mRedis connection established[39m
+2025-02-13 19:45:27:4527 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-13 19:45:27:4527 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-13 19:45:50:4550 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-13 19:45:50:4550 [32minfo[39m: [32mRedis connection established[39m
+2025-02-13 19:45:51:4551 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-13 19:45:51:4551 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-13 19:56:00:560 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-13 19:56:00:560 [32minfo[39m: [32mRedis connection established[39m
+2025-02-13 19:56:00:560 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-13 19:56:00:560 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-13 19:59:57:5957 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-13 19:59:57:5957 [32minfo[39m: [32mRedis connection established[39m
+2025-02-13 19:59:57:5957 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-13 19:59:57:5957 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-13 20:00:38:038 [31merror[39m: [31mAudio conversion error: Unsupported codec wav for format wav[39m
+2025-02-13 20:00:38:038 [31merror[39m: [31mAudio upload error: Audio conversion failed: Unsupported codec wav for format wav[39m
+2025-02-13 20:00:54:054 [31merror[39m: [31mAudio conversion error: Unsupported codec wav for format wav[39m
+2025-02-13 20:00:54:054 [31merror[39m: [31mAudio upload error: Audio conversion failed: Unsupported codec wav for format wav[39m
+2025-02-13 20:01:24:124 [31merror[39m: [31mAudio conversion error: Unsupported codec wav for format wav[39m
+2025-02-13 20:01:24:124 [31merror[39m: [31mAudio upload error: Audio conversion failed: Unsupported codec wav for format wav[39m
+2025-02-13 20:23:09:239 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-13 20:23:10:2310 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-13 20:23:12:2312 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:23:59:2359 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-13 20:23:59:2359 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-13 20:23:59:2359 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:00:240 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:00:240 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:00:240 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:02:242 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:02:242 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:02:242 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:12:2412 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:12:2412 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:13:2413 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:13:2413 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-13 20:24:15:2415 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:15:2415 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:32:16:3216 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-21 23:32:16:3216 [32minfo[39m: [32mRedis connection established[39m
+2025-02-21 23:32:17:3217 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-21 23:32:17:3217 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-21 23:38:38:3838 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-21 23:38:38:3838 [32minfo[39m: [32mRedis connection established[39m
+2025-02-21 23:38:39:3839 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-21 23:38:39:3839 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-21 23:39:09:399 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-21 23:39:09:399 [32minfo[39m: [32mRedis connection established[39m
+2025-02-21 23:39:10:3910 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-21 23:39:10:3910 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-21 23:40:56:4056 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-21 23:40:56:4056 [32minfo[39m: [32mRedis connection established[39m
+2025-02-21 23:40:57:4057 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-21 23:40:57:4057 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-21 23:41:36:4136 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-21 23:41:36:4136 [32minfo[39m: [32mRedis connection established[39m
+2025-02-21 23:41:36:4136 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-21 23:41:36:4136 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-21 23:45:11:4511 [32minfo[39m: [32mRedis Client Connected[39m
+2025-02-21 23:45:11:4511 [32minfo[39m: [32mRedis connection established[39m
+2025-02-21 23:45:12:4512 [32minfo[39m: [32mMongoDB connected successfully[39m
+2025-02-21 23:45:12:4512 [32minfo[39m: [32mServer running on http://localhost:3001[39m
+2025-02-21 23:45:37:4537 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-21 23:45:38:4538 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-21 23:45:38:4538 [33mwarn[39m: [33mOperation failed (attempt 1/3): client.zRevRange is not a function[39m
+2025-02-21 23:45:38:4538 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-21 23:45:39:4539 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-21 23:45:39:4539 [33mwarn[39m: [33mOperation failed (attempt 2/3): client.zRevRange is not a function[39m
+2025-02-21 23:45:40:4540 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:45:41:4541 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:45:41:4541 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:45:55:4555 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:45:56:4556 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 4 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 5 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 6 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:45:57:4557 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 1 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:45:58:4558 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:47:16:4716 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 0 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 1 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:47:17:4717 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 0 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 1 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:48:09:489 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:48:11:4811 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 0 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 1 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:48:12:4812 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 0 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m

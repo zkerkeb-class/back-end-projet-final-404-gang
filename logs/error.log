@@ -1829,3 +1829,380 @@
 2025-02-04 11:25:19:2519 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
 2025-02-04 11:37:54:3754 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
 2025-02-04 11:37:54:3754 [31merror[39m: [31mCache middleware error: redis.get is not a function[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:51:5151 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:52:5152 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:52:5152 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:52:5152 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:53:5153 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:53:5153 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:53:5153 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:54:5154 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:55:5155 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:55:5155 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:56:5156 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:56:5156 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:57:5157 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:57:5157 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:58:5158 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:58:5158 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:59:5159 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:51:59:5159 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:00:520 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:00:520 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:01:521 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:01:521 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:02:522 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:02:522 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:03:523 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:03:523 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:04:524 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:04:524 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:05:525 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:05:525 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:06:526 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:06:526 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:07:527 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:07:527 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:08:528 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:08:528 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:09:529 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:09:529 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:52:10:5210 [31merror[39m: [31mRedis Client Error:[39m
+2025-02-08 11:57:58:5758 [31merror[39m: [31mError creating artist: Artist validation failed: genre: Path `genre` is required.[39m
+2025-02-08 11:58:17:5817 [31merror[39m: [31mError creating artist: Artist validation failed: genre: Path `genre` is required.[39m
+2025-02-08 12:27:18:2718 [31merror[39m: [31mError deleting artist: artist.remove is not a function[39m
+2025-02-08 12:46:27:4627 [31merror[39m: [31mErreur lors de la suppression du cache: getRedisConnection is not defined[39m
+2025-02-08 13:59:05:595 [31merror[39m: [31mError creating playlist: Playlist validation failed: createdBy: Path `createdBy` is required.[39m
+2025-02-08 14:01:03:13 [31merror[39m: [31mError connecting to MongoDB:[39m
+2025-02-08 14:02:54:254 [31merror[39m: [31mError connecting to MongoDB:[39m
+2025-02-08 14:04:28:428 [31merror[39m: [31mError creating playlist: Playlist validation failed: createdBy: Path `createdBy` is required.[39m
+2025-02-08 14:04:41:441 [31merror[39m: [31mError creating playlist: createdBy is not defined[39m
+2025-02-08 14:05:01:51 [31merror[39m: [31mError creating playlist: Playlist validation failed: createdBy: Path `createdBy` is required.[39m
+2025-02-09 12:19:03:193 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 1 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:11:1911 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:12:1912 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 3 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:13:1913 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 3 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 4 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:19:13:1913 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 3 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 4 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 5 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:29:43:2943 [31merror[39m: [31mError fetching track: Cast to ObjectId failed for value "upload" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:35:14:3514 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 0 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 1 },\n" +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 2 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 3 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 4 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 5 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 6 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 7 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:35:16:3516 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 0 },\n" +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 1 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 2 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 3 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 4 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 5 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 6 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 7 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:35:17:3517 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 0 },\n" +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 1 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 2 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 3 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 4 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 5 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 6 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 7 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:35:26:3526 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '678910b0d66bf254ac41e5ad', order: 0 },\n" +[39m
+[31m  "  { id: '678910b6d66bf254ac41e5b3', order: 1 },\n" +[39m
+[31m  "  { id: '678910b9d66bf254ac41e5b9', order: 2 },\n" +[39m
+[31m  "  { id: '678910bfd66bf254ac41e5bf', order: 3 },\n" +[39m
+[31m  "  { id: '678910c3d66bf254ac41e5c5', order: 4 },\n" +[39m
+[31m  "  { id: '678910a6d66bf254ac41e5a1', order: 5 },\n" +[39m
+[31m  "  { id: '678910c6d66bf254ac41e5cb', order: 6 },\n" +[39m
+[31m  "  { id: '678910cbd66bf254ac41e5d1', order: 7 },\n" +[39m
+[31m  "  { id: '678910aad66bf254ac41e5a7', order: 8 },\n" +[39m
+[31m  "  { id: '678910d0d66bf254ac41e5d7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-09 12:39:38:3938 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "csrf-token" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:39:38:3938 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "csrf-token" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:41:4141 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:44:4144 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:46:4146 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "tracks" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:41:52:4152 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:18:4218 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:18:4218 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:46:4246 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:46:4246 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "albums" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:58:4258 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-09 12:42:58:4258 [31merror[39m: [31mGet track error: Cast to ObjectId failed for value "artists" (type string) at path "_id" for model "Track"[39m
+2025-02-13 19:35:46:3546 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:08:398 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 1 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 2 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 3 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 4 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:10:3910 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 1 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 2 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 3 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 4 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:11:3911 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 1 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 2 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 3 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 4 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 19:39:12:3912 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '6789100ed66bf254ac41e4f3', order: 0 },\n" +[39m
+[31m  "  { id: '67891013d66bf254ac41e4f9', order: 1 },\n" +[39m
+[31m  "  { id: '67891017d66bf254ac41e4ff', order: 2 },\n" +[39m
+[31m  "  { id: '6789101ed66bf254ac41e505', order: 3 },\n" +[39m
+[31m  "  { id: '67891023d66bf254ac41e50b', order: 4 },\n" +[39m
+[31m  "  { id: '67891009d66bf254ac41e4ed', order: 5 },\n" +[39m
+[31m  "  { id: '67891028d66bf254ac41e511', order: 6 },\n" +[39m
+[31m  "  { id: '6789102dd66bf254ac41e517', order: 7 },\n" +[39m
+[31m  "  { id: '67891033d66bf254ac41e51d', order: 8 },\n" +[39m
+[31m  "  { id: '67891038d66bf254ac41e523', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-13 20:00:38:038 [31merror[39m: [31mAudio conversion error: Unsupported codec wav for format wav[39m
+2025-02-13 20:00:38:038 [31merror[39m: [31mAudio upload error: Audio conversion failed: Unsupported codec wav for format wav[39m
+2025-02-13 20:00:54:054 [31merror[39m: [31mAudio conversion error: Unsupported codec wav for format wav[39m
+2025-02-13 20:00:54:054 [31merror[39m: [31mAudio upload error: Audio conversion failed: Unsupported codec wav for format wav[39m
+2025-02-13 20:01:24:124 [31merror[39m: [31mAudio conversion error: Unsupported codec wav for format wav[39m
+2025-02-13 20:01:24:124 [31merror[39m: [31mAudio upload error: Audio conversion failed: Unsupported codec wav for format wav[39m
+2025-02-13 20:23:12:2312 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:02:242 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:02:242 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:02:242 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:15:2415 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-13 20:24:15:2415 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:45:40:4540 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:45:41:4541 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:45:41:4541 [31merror[39m: [31mError getting suggestions: client.zRevRange is not a function[39m
+2025-02-21 23:45:55:4555 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:45:56:4556 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 4 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 5 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 6 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:45:57:4557 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 1 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:45:58:4558 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:47:16:4716 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 0 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 1 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:47:17:4717 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 0 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 1 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 2 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 3 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:48:09:489 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 0 },\n" +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:48:11:4811 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 0 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 1 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m
+2025-02-21 23:48:12:4812 [31merror[39m: [31mError updating album: Album validation failed: tracks.0: Cast to [ObjectId] failed for value "[\n' +[39m
+[31m  "  { id: '67891187d66bf254ac41e69d', order: 0 },\n" +[39m
+[31m  "  { id: '67891181d66bf254ac41e697', order: 1 },\n" +[39m
+[31m  "  { id: '6789118cd66bf254ac41e6a3', order: 2 },\n" +[39m
+[31m  "  { id: '6789117cd66bf254ac41e691', order: 3 },\n" +[39m
+[31m  "  { id: '67891192d66bf254ac41e6a9', order: 4 },\n" +[39m
+[31m  "  { id: '67891198d66bf254ac41e6af', order: 5 },\n" +[39m
+[31m  "  { id: '678911a0d66bf254ac41e6b5', order: 6 },\n" +[39m
+[31m  "  { id: '678911a5d66bf254ac41e6bb', order: 7 },\n" +[39m
+[31m  "  { id: '678911abd66bf254ac41e6c1', order: 8 },\n" +[39m
+[31m  "  { id: '678911b1d66bf254ac41e6c7', order: 9 }\n" +[39m
+[31m  ']" (type string) at path "tracks.0" because of "CastError"[39m

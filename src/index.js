@@ -16,6 +16,8 @@ const trackRoutes = require('./routes/trackRoutes');
 const playlistRoutes = require('./routes/playlistRoutes');
 const lyricsRoutes = require('./routes/lyricsRoutes');
 const userRoutes = require('./routes/userRoutes');
+const audioRoutes = require('./routes/audioRoutes');
+const rateLimiter = require('./middleware/rateLimiter')
 
 const app = express();
 
@@ -23,15 +25,15 @@ const initializeApp = async () => {
   try {
     // Initialize Redis connection
     await getRedisConnection();
-    
+    const redis = await getRedisConnection();
+const keys = await redis.queryCache.keys('query:*');
+console.log('Clés Redis existantes:', keys);
     // Initialize session configuration
     const sessionConfig = await require('./config/session')();
-    
+    app.use(rateLimiter)
     // CORS middleware
     app.use(cors({
-      origin: process.env.NODE_ENV === 'production' 
-        ? ['https://yourdomain.com'] // Add your production domains here
-        : ['http://localhost:3000', 'http://localhost:5173'], // Development domains
+      origin: true, // Permet toutes les origines
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
       allowedHeaders: ['Content-Type', 'Authorization']
@@ -47,6 +49,8 @@ const initializeApp = async () => {
     // API Routes
     app.use('/api/search', searchRoutes);
     app.use('/api', uploadRoutes);
+    app.use('/api/audio', audioRoutes);
+
     app.use('/api', artistRoutes);
     app.use('/api', albumRoutes);
     app.use('/api', trackRoutes);

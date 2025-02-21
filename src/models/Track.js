@@ -16,6 +16,11 @@ const TrackSchema = new mongoose.Schema({
     small: { type: String },
     medium: { type: String },
     large: { type: String }
+  },
+  // pour l'ordre des tracks 
+  trackNumber: {
+    type: Number,
+    min: 1
   }
 }, { timestamps: true });
 
