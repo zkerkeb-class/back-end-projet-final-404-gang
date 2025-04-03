@@ -130,7 +130,7 @@ ISC
 
 ## Contributors
 
-- [Your Name/Team]
+- [aladdin/404GANG]
 
 ## Future Improvements
 
